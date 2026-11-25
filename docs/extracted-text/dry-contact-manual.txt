@@ -1,0 +1,837 @@
+Recognised text of docs/sources/User Manual V1.0 MTDx61 Dry Contact Series Human Presence Sensor.pdf
+
+User Manual for MTDx61 Dry
+contact Series Human
+Occupancy Detection Sensor
+
+2
+User's manualV1.1
+Copyright Description
+The hardware, software, and materials referenced in this document are the exclusive property of the
+company, and all rights are reserved. The company retains the right to modify this document, the
+products described herein, and all associated copyrights. The intellectual property is fully protected
+by national law, and any unauthorized use or copying by other companies, organizations, or
+individualsisstrictlyprohibitedwithoutthecompany’sexpressauthorization.
+Statement
+Please read this statement carefully before using the products described in this document. Once
+used,itisdeemedarecognitionandacceptanceofthecontentsofthisstatement.
+When the user has a sensing sensor, according to the product characteristics, performance and
+functions described in this document, they must retest based on their own application to meet the
+user's application needs. In case of damage or damage caused by improper use, it shall not bear the
+correspondinglossandcompensationliability.
+Due to continuous update and iteration, the document may be changed without notice. Please
+confirm the update and errata information through appropriate channels during the application. We
+havetheultimatepowerofinterpretation.
+Please carefully review this statement before using the products described in this document. By
+using the products, you acknowledge and accept the contents of this statement.
+When using a sensing sensor, users must conduct their own testing based on their specific
+application needs, taking into account the product characteristics, performance, and functions
+described in this document. The company shall not be held liable for any losses or damages
+resulting from improper use or damage caused by the user.
+Please note that this document may be updated or revised without prior notice due to continuous
+updates and iterations. Please check for updates and errata information through appropriate
+channels during use. The company reserves the right to interpret this statement.
+
+3
+User's manualV1.1
+Safety Precautions
+Safety Signs
+The following safety marks are used in this manual.
+Safety Signs Instruction
+When used improperly, it will cause dangerous conditions, which is very likely to lead to
+personal injury or death.
+When used improperly, it will cause dangerous conditions, may lead to personal injury or
+death and equipment damage.
+Read carefully and follow the instructions for equipment operation
+Before starting the operation, please carefully read the operation instructions and precautions to
+reduce the occurrence of accidents. The "care, attention, warning, danger" items in the product and user
+manual do not represent all safety matters observed and serve only as a supplement to various
+operational safety precautions. Therefore, the product installation, operation personnel must be through
+strict training, master the correct operation methods of the system and various safety precautions, before
+the operation of the equipment.
+In the operation of the company's products and equipment, we must comply with the safety
+specifications of the relevant industry, and strictly observe the relevant equipment precautions and special
+safety instructions.
+Electrical Safety
+This manual covers the installation and use of the MTDx61 Dry contact series of human presence
+sensors.
+Please strictly observe all the warning signs and operation instructions in this manual and do not
+operate the equipment without reading all the safety instructions and operation instructions.
+warning
+1.MTDx61 Dry contact series human presence sensor must be installed and debugged by the manufacturer or its
+authorized agent, otherwise it may endanger personal safety and lead to sensor failure of MTDx61 Dry contact series.
+The resulting MTDx61 Dry contact series human body sensor damage, is not covered by warranty.
+2. This product adopts internal non-isolated power supply, and it is strictly prohibited to install or remove the equipment.
+3. It is strictly prohibited to put the MTDx61 Dry contact series human body sensor in the fire to avoid explosion and
+endanger personal safety.
+4. It is strictly forbidden to dismantle and repair without permission.
+
+4
+User's manualV1.1
+Precautions for Use
+Please read and understand carefully before you use it
+It is forbidden to use MTDx61 Dry contact series human body sensors in elevator, metal plate room (less than 6m 6m)
+and metal sealed toilet; it is not recommended to use the plane area of metal decorative material in the area exceeding
+20%. The above scenario and sensor features can lead to abnormal usage.
+It is forbidden to install MTDx61 Dry contact series human body sensors and routers or other high-power WIFI
+equipment close to them. For installation spacing requirements, refer to 5.4 Installation principles.
+When deploying intensively in large space, please deploy in strict accordance with the spacing requirements. refer to 5.4
+Installation principles for details.
+MTDx61 Dry contact series human body sensor is ceiling embedded installation, horizontal installation is not
+recommended, affecting the detection effect.
+Caution
+1. The standard model MTDx61 Dry contact series human body has sensors connected with external AC electric
+power. Before this operation, it must be operated under power failure, which must be operated by professionals, and
+private operation is prohibited.
+2. Use environment and preservation methods have a certain impact on the service life and reliability of MTDx61 Dry
+contact series human body sensors, and avoid the long-term use of MTDx61 Dry contact series human body
+sensors in the following working environment:
+The high temperature, low temperature or damp places beyond the specified technical index of the product
+Places with conductive dust, corrosive gas, salt spray, or combustible gas
+Vibrating, vulnerable places
+Close to the heat source or in places with strong electromagnetic field interference
+3. Liquid or other foreign objects are not allowed to enter the MTDx61 Dry contact series human body sensor.
+4. If a fire occurs around the equipment or equipment, first cut off the power supply; a dry powder fire extinguisher
+must be used to extinguish the fire, and the liquid fire extinguisher will risk electric shock.
+5. If not used for a long time, the MTDx61 Dry contact series human presence sensor must be stored in a dry
+environment. Storage temperature and humidity range of the standard model MTDx61 Dry contact series human
+body presence sensor: -20℃ ~ + 65℃, 40 ~ 60% RH.
+
+5
+User's manualV1.1
+Cataloge
+CopyrightDescription..........................................................................................................................2
+Statement.............................................................................................................................................2
+SafetyPrecautions................................................................................................................................3
+1. ProductParameter..........................................................................................................................6
+2. InterfaceSizeInterfacesizeInterfacesiz........................................................................................9
+3. Install............................................................................................................................................10
+4. productuse....................................................................................................................................12
+5. CommonProblemsandSolutions................................................................................................17
+6. SpecialInstructionsfortheSensor...............................................................................................19
+7. RemoteControlSettingParameters.............................................................................................21
+
+6
+User's manualV1.1
+1. Product Parameter
+1． Main Parameter
+product model
+5.8GHz 24GHz
+MTD061-RC MTD261-RC
+Parameter item Description
+Physica
+l
+paramet
+ers
+productsize The maximum diameter oftheouter edge ofthedrycontact is 50mm, theheight is37mm, and a circularholewithadiameterof40-42mmisopened
+colour Ceramic white
+weight ≤30g
+Inducti
+on
+paramet
+ers
+BeamAngle 120×120°,theangle ofthesignal energy at 3dB(0.5times) 115×115°,the angle of the signal energy at 3 dB(0.5times)
+Topmount:
+detectionradius
+Respiratorydetectionradius:2.5～3m
+Micromotiondetectionradius:3~4m
+Movementdetectionradius:4~5.5m
+Respiratorydetectionradius:2～3m
+Micromotiondetectionradius:3~4m
+Movementdetectionradius:4~4.5m
+Topmount:
+mountingheight
+Typicalheight:2.7m～3.5m
+sensitivity
+1~9;Minimumsensitivity1,highestsensitivity9;default7
+explanatorynote:
+0Turnoffthesensordetection,thelargerthevalue,themoresensitive,thesensitivitywithin6
+canonlyachievemotiondetection,7-9canachievebreathdetection,thereliabilityofthe
+existenceisrelatedto"unmanneddelay"(seetherecommendedparameterconfigurationin
+differentscenariosforcorrespondingSettings).
+detectionrange
+1.5-10m;thedefaultmaximumdetection
+distanceis6m 1.5~10m;thedefaultprobedistanceis7m
+explanatorynote:
+1.Detectiondistancereferstothelongestdistanceofthesensorfromthestraightlinethatcan
+detectthemovement,micromovementandbreathingtarget,andthemaximumdiameterorradius
+notmappingtotheground.
+2.Thedistanceisnon-absolutedistance,thesensordetectionhasadistanceresolution,the
+resolutionisabout1m.If3misset,itisnormaltotriggerinthe ± 1mintervalatthe3m
+position.
+3.Thedistancevalueismainlyusedasfilterglasspartition,gypsumboardandwoodpartition,
+andisnotstrictlyusedasthedetectionarea.If3misset,theremaybemissingreportandfalse
+touchat3mposition ± 1m.
+delaytime
+5s~25min;itisrecommendednottobelessthan15seconds,toosmallandeasytomissthe
+report
+explanatorynote:
+Thisdelayindicates:1.Thesensortriggersthetimetoleave;2.Thesensortriggerswithinthe
+delaytimeandcontinuestoextend.3.Intheobservationwindowofthesensor,thelongerthe
+delay,thesmallertheprobabilityofsensoromission,andtherespiratorydetectiondelayisnot
+lessthan60s.
+Test:Itisrecommendedtosetthedelayof5s&10stoavoidthelongwaitingtime.
+lightsense
+0～250Lux
+explanatorynote:
+Thedetectionvalueisnottheabsolutevalueofambientlight,whichislimitedbytheinstallation
+direction,illuminationAngleandotherfactors,andcanonlyroughlyreflectthetrendofambient
+brightness.
+gangcontrol Supportlinkagecontrolanddynamicconfigurationoflinkageparameters
+
+7
+User's manualV1.1
+system
+paramet
+er
+mi
+cro
+wa
+ve
+service
+frequency 5.8GHz ± 75MHz,intheISMband 24GHz ± 125MHz,intheISMband
+(Pt)Transmit
+tingpower
+(Pt)
+3～5dBm 10dBm
+Modulation
+mode FMCW、CW
+working
+conditi
+ons
+workingvoltage DC9-36V,Typical12V DC9-36V,Typical12V
+operatingpower ＜ 1W
+working
+temperature -10℃~+50℃
+Storage
+temperature -20℃～65℃
+Workinghumidity 5～90%RH
+Workaltitude 0-3500m
+Protectionlevel IP20
+output Outputmethod Relayoutput;Voltage ≤ 24V,current ≤ 100mA Relayoutput;Voltage ≤ 24V,current ≤ 100mA
+others
+Installation
+requirements
+Installationheight:2.7-3.5m;Installationmethod:embedded;Holesize:circularholewitha
+diameterof40-42mm
+inputterminal
+Wireharnessconnection,equippedwith0.1mwireharness,itisrecommendedtouseterminal
+blocksforextension
+Limitusage
+scenarios
+Insidetheelevator,metalslabroom(lessthan
+6m6m)andmetalsealedtoilet,theplanearea
+ofmetaldecorativematerialsoutsidethe
+ceilingexceeds20%.
+Inelevatorsandmetalsealedtoiletsinall
+metalsealedspace;morethan20%ofmetal
+decorativematerialsintheareaoutsidethe
+ceiling.
+
+8
+User's manualV1.1
+2． Detection Range: Top Mount
+Thefollowingfigureisaschematicdiagramofthedetectableareaofthehumanbodyfacingthe
+sensorwhen"topmounted".
+"Micro-movement" detection area: can detect micro-movement (head, wave, hand, light start,
+turn over the book, left and right front and back slightly tilt and other small movements), movement
+(walking,trot,running,circle,jumpmovement),existence(standingstill,squattingmotionless);
+"Existence" detection area: can detect the standing still, squatting still, sitting still and other
+humanbodyinthestaticstate.
+The Motion detection
+The "Micromotion" detection
+he "Breathing" detection area
+Thesuctiontop
+installation
+2.7~3.5m
+5.8Gradarmodule
+Detectioncoveragerange(relatedtoinstallationheightandsensitivity
+parameters):
+Detectionradiusduringtopinstallation:2-3metersforhumanbreathing
+Detectionradiusduringtopinstallation:3-4mforhumanbodymicro
+movement
+Detectionradiusduringtopinstallation:humanbodymovementof4-4.5
+meters
+24Gradarmodule
+Detectioncoveragerange(relatedtoinstallationheightandsensitivity
+parameters):
+Detectionradiusduringtopinstallation:2.5to3metersforhumanbreathing
+Detectionradiusduringtopinstallation:3-4mforhumanbodymicro
+movement
+Detectionradiusduringtopinstallation:humanmotion4-5.5m
+Note: 1. The above range value is based on the conclusion of 3m, 10 x10m length and width, and
+parameterconfiguration:sensitivity7-9.Withadelayof60sandadetectiondistanceof9m,different
+sceneswillhavecertaindifferences.
+2.The detectable radius is related to many factors such as the installation environment, human size,
+relativeAngle,andmicro-motion/motionrange.Theaboveparametersarethetestresultsofsensors
+used by our tester. The descriptions of small movements and movements are qualitative, not
+quantitative,forreferenceonly. Under different test conditions, please refer to the actual test.
+
+9
+User's manualV1.1
+2. Interface SizeInterfacesizeInterfacesiz
+2.1 Interface
+2.2 Size
+TheMTDx61drycontact sensorseriesadoptsanembeddedceilinginstallationmethod,withan
+outeredgeof50mm;Thesizeoftheembeddedceilingpartis:diameter × High=40 × 35mm.
+Serial Number colour function
+1 red Positive pole of power supply
+2 black Negative pole of power supply
+3 white S1
+4 green S2
+S1
+Positive pole of power supply
+Negative pole of power supply
+S2
+
+
+10
+User's manualV1.1
+2.3 Wiring
+Connect the external power and signal wires tothe sensor's built-inharness and introduce them
+intotheceilingopening.
+3. Install
+3.1InstallationMethod1:EmbeddedInstallation
+1. According to the scope and shape of the area to be tested, select a suitable installation
+locationontheceilingtoensurethatthetestingareacanbeeffectivelycovered.
+2. The edge diameter of the equipment is 50mm, and the embedded part is 40 * 35mm
+(cylindrical). Circular holes with a diameter of 40-42mm can be opened on the ceiling, and the
+minimumreservedspaceatthetopisnotlessthan50mm.
+3. Clip the power and signal cables onto the equipment (gently clip the cables, otherwise they
+maybeeasilycut)andintroducethemintotheceilingopening.
+4.Insertthedeviceintotheceilingholetocompletetheinstallation.
+dc power
+control signal
+40mm
+installationdiagram
+
+11
+User's manualV1.1
+3.2InstallationMethod2:BracketInstallation
+1.According tothe scope and shape of the area to be tested, select a suitableinstallation locationon
+thewalltoensurethatthetestingareacanbeeffectivelycovered.
+2. Fix the sensor on the installation bracket, and according to the installation angle of the sensor,
+make wire harness holes and bracket fixing holes on the wall. The wire harness through-hole is a
+circularholewithadiameterof8mm.
+3. The fixed hole diameter of the equipment installation bracket is 5mm, and a circular hole with a
+diameter of 5mm can be opened on the wall. The bracket is fixed with matching expansion screws,
+andtheminimumreservedspaceatthetopisnotlessthan50mm.
+4. Introduce the power and signal wires into the bracket opening and clip them onto the reserved
+wiringharnessoftheequipment(gentlyclipthewires,otherwisetheymaybeeasilycut)tocomplete
+theinstallation.
+Installationdimensionidentificationdiagram
+Wire harness through-hole on the bracket, with a
+diameter of 8mm
+The product comes with a wiring harness,
+with a diameter of 4mm
+Bracket fixing hole with a diameter of 5mm
+installationdiagram
+
+12
+User's manualV1.1
+4. product use
+4.1 Output signal access to user system
+Connect the sensor's reed output terminals S1 and S2 to the user system; Choose the appropriate
+accessplanbasedonthespecificsituation:
+(1)Fourwirefullyisolatedaccessmethod:
+S1 and S2 terminals have no electrical connection with the sensor. When the presence of a human
+body is detected, S1 and S2 terminals are connected; Otherwise, S1 and S2 terminals are
+disconnected;
+Reminder:Refer tothe"ExplanationofReedOutputSignal" sectionofthe"OrderingandSelection"
+section
+4.2 Sensor power supply
+Provide 9 V DC power supply for sensors with suffix DC; Provide 9-24 V DC power supply for
+sensors with suffix RC; DC power can be supplied centrally using a switching power supply or
+separatelyusingapoweradapter.
+4.3 Using the Remote Control to Configure Parameters
+Using a remote control to configure the parameters of the MTDx61 dry contact series sensors
+facilitateson-siteinstallation,debugging,andmaintenancemanagement.
+(1) Configure parameters such as "detection distance", "sensitivity", "delay time", and "light
+intensity";
+Tip:Refertothe"RemoteControlSettingParameters"sectionofChapter7
+
+13
+User's manualV1.1
+4.4 Recommended Parameter Configuration for Different
+Scenarios
+scene
+Scenario
+requirem
+ents
+installation
+requirements
+Parameter configuration
+suggestions
+notes
+porch /
+corridor
+Dressing
+Room
+Microacti
+vemotion
+detection
+and
+motion
+detection
+1.Regionalcenter
+Sensitivity:1~9;
+detectionrange:
+Familyporch2.5-3.5m;
+Publicarea:3.5~9m;
+Someonetonoonedelayfor
+morethan20s.
+Porch, corridor, dressing room
+normally the personnel stay time is
+relativelyshort,themovementrange
+is obvious, the actual scene only
+needs the movement triggered to
+meet the demand, such as special
+demand stay for a long time or the
+public area has a conversation
+scene, improve sensitivity, elongate
+"someonetonodelay"can
+kitchen
+Respirator
+y
+detection
+micromoti
+on
+detection
+motion
+detection
+Kitchen: in the
+center of the
+kitchen, stay away
+from the exhaust
+fans, glass doors
+andWindows,etc
+Sensitivity:6~9;
+Thedetectiondistanceis
+2.5~4m;
+Someonetonoonedelayof
+morethan30s.
+1.Inthekitchenscene,therearefew
+people completely motionless.
+"Someone to no delay" can be set
+slightlyshorter
+Family
+bathroom
+lavatory
+Respirator
+y
+detection
+micromoti
+on
+detection
+motion
+detection
+Sanitary room and
+toilet: away from
+doors and
+Windows, away
+from exhaust fan;
+0.4-0.6m of toilet
+/ squat in front of
+the roof,
+comprehensive
+evaluation.
+Sensitivity:7~9;
+Probedistanceof2.5~3.5m;
+1. Someonetonoonedelayof
+morethan60s.
+This kind of scene generally has a
+small area, and people may be in a
+static state for a long time. It needs
+to do respiratory detection, high
+sensitivity needs to be set, and
+special attention is paid to the glass
+door when setting the detection
+distance.
+saloon
+dining
+room
+assembly
+micromoti
+on
+detection
+motion
+Living room:
+0.5~1m position
+infrontofthesofa
+Dining room: the
+Sensitivity:7~9;
+Detectionrangeof4~9m;
+Someonetonoonedelayof
+Living room, meeting room scene,
+theareaisrelativelylarge,personnel
+sitting, lying completely motionless,
+sensitivity and distanceneed to set a
+
+14
+User's manualV1.1
+room detection center location of
+thediningtable
+Conference room:
+on the central axis
+of the long side of
+themeetingtable
+morethan60s. highvalue.
+The dining room scene is small and
+large, and the actual scene overlaps
+with the living room or open
+kitchen. It is necessary to set an
+appropriate distance to achieve a
+betterexperience.
+bedroom
+study
+micromoti
+on
+detection
+motion
+detection
+Bedroom: within
+thebedarea
+Study:insidethe
+0.6-1.5mbefore
+andafterthedesk
+Sensitivity:8-9;
+Detectiondistanceof5.5-9m;
+Delayofmorethan180seconds
+fromsomeonetonoone.
+Bedroomscenario:usersspendmost
+of sleep, reading and rest time, with
+less movement; breath detection
+requires high sensitivity, and long
+delaytokeepthesensornottomiss.
+Under the study scene:peoplearein
+a state of reading or working for a
+long time, and they also need to
+detect breathing to judge the
+existence of people. It needs high
+sensitivity. The distance setting is
+considered according to the area of
+the actual scene and the potential
+source of interference
+comprehensively.
+Please refer to the above table for setting the scene parameters, otherwise the best sensor effect
+cannotbeachieved!
+
+15
+User's manualV1.1
+4.5 Installation Principle
+(1)Porch/aisle,changingclothesroomscene:center,fixedfirmly.
+(2)Kitchen scene: in the center, fixed firmly. For example, when the installation area is square,
+there is an open glass door on the long side, and if the central installation position is just
+opposite the glass door, you need to re-select the position. At this time, the door piercing
+problem can be solved by installing the sensor on the side position of the solid wall on the
+sideofthedoor,andtheexperiencewillnotbeaffectedaftersettingtheappropriatedistance.
+(3)Home bathroom and toilet scene: stay away from doors andWindows; 0.4-0.6m in front of the
+toilet / squat location covering the whole scene space; microwave signal can penetrate the
+glass door or wooden door by solve the sensor on the side wall of the door. The actual
+positioningrequirescomprehensiveevaluationonsite.
+(4)Livingroom/ diningroom /meetingroomscene: Livingroom:0.5~1m infront ofsofa; dining
+room:tablecenter;conferenceroom:onthelongcentralaxisofmeetingtable.
+(5)Bedroom, study scene: Bedroom: in the area directly above the bed; study: in the 0.6-1.5m
+beforeandafterthedesk.
+(6) Other types of scenarios
+1 Longandspecial-shapedareascenario:bothsidesofthelongsideofthelongarea(long
+side is less than 10m); if the long side is glass or gypsum board, and the long side is less than 1.3
+times, the solid wall can be more than 1.3 times, two sensors shall be installed in sections; if the
+longsideisglassorgypsum board,thelongandremoteareaislargerthanthesensor,andthearea
+shallbedividedandtheaboveprinciplesshallbeobserved.
+2 Glass and gypsum board partition: Keep away from glass and partition test, and try as
+close to the solid wall on the premise that the sensor can meet the breathing area to be covered.
+For example,the surrounding isglass and partition installedin themiddle, and set theappropriate
+detection distance, indent distance, trigger sensitivity to solve the detected outside the glass and
+thewall.
+3 People sitting, squatting, standing in the motionless scene: sensor top, 0.4-0.8m in front
+ofthefrontofthehead.Shouldnotbedirectlyontheheadposition.
+4 Intensivedeploymentscenario:thesensorisnotlessthan4m.
+
+16
+User's manualV1.1
+4.6 Common Interference Sources and Solutions
+(1)Fan: fan shaking head (blade diameter greater than 10cm), metal fan without shaking head,
+ceilingfan.
+Thefan blade greater than10cm causes thesensor tocontinuouslyoutput thehuman state;
+the metal blade fan can trigger or maintain the human state output of the sensor when working;
+and the plastic blade fan without shaking the head can be filtered by the sensor in areas other
+thantheareaofthebreathdetection.Settingappropriatetriggersensitivitycaneffectivelyavoid
+someinterferencetriggersensoroutput.
+(2)Air conditioning: the air swing of the hang and cabinet, the metal ornaments blown by the air
+conditioning, the thick curtain blown by the air conditioning, the ceiling vibration driven by
+theceilingairconditioning,theshuttervibrationofthecentralairconditioner.
+Theairswingandlouvervibrationoftheairconditionercantriggerormaintainthehuman
+state of the sensor within the breathing coverage of the sensor; the air conditioner can also
+trigger or maintain the human state of the sensor. Setting appropriate trigger sensitivity and
+trigger indent can avoid most false triggers; but it cannot completely solve the problem that
+interferencecausesthesensortocontinuouslyoutputhumanstateafterhumanleave.
+(3)Curtains:curtainsthatswaysignificantly,rollerblindswithaluminumalloybottomrails.
+Small swing curtains such as cloth, cotton, and sand curtains used in ordinary households
+arenoteasytotriggersensors;Iftherollershutterwithaluminumalloylowerrailswingswithin
+the detection distance range, it is easy to trigger the sensor. By setting an appropriate detection
+distance and filtering out such interference, it is possible to effectively avoid false triggering
+causedbytheabovescenarios.
+(4)Drain fan: ceiling vibration caused by metal fan leaf and exhaust fan of exhaust fan. If the
+sensor cannot be triggered without the diameter of the front side of the sensor, the ceiling
+vibration caused by the exhaust fan drives the sensor vibration or the vibration surface
+detectedbythesensorwillbetriggered.
+(5)Strong5.8GHzWiFisignalinterference:5.8GHzWiFirouter/APinthefrontareaofthesensor,
+or5.8GHzWiFirouter/APinthehorizontalor1.5mofthesensor.
+It is recommended that theWiFi router inthe front area of the sensor be installed over 3m
+from the sensor; the other direction shall be separated above 1.5m from the sensor; and the
+top-mountedAPshallbeseparatedabove1.5mfromthesensor.
+
+17
+User's manualV1.1
+(6)Air flow (wind): the movement, movement and vibration of objects in the scene caused by
+blowingmaycausethetrigger.
+Settingtheappropriatetriggersensitivitycanfilterthewindandgrassbelow2-3,thelargerthe
+windlevel,themorelikelytotrigger.
+(7)Animals: cats, dogs, mice, other pets, etc. The difference between other animal species and
+humancharacteristicsisinthatofthebodysize,suchastheanimalbodysizeandhumanbody,
+andthetriggeringmechanismandhumanbodyarealsoconsistent.
+Set the appropriate trigger sensitivity and trigger indent distance, most of the kitten and
+puppy mice are unable to trigger the sensor. Such as the curtains caused by cats and dogs, or
+clothes,sheets,quiltcoversdragging,themovementofobjectswillalsotriggersensors.
+(8)Low frequency vibration: wall or ceiling vibration caused by high sound volume, vibration
+causedbyupstairsanddownstairsdecoration,etc.
+When installation, it is necessary to maintain a suitable distance with the stereo to avoid
+the radar signal directly hitting the main stereo. When choosing the installation position, the
+main consideration is to cover the stationary area, such as sofa, seat, etc. Set a relatively low
+sensitivity (avoid mistriggering) and a longer 'human to no delay' to achieve more reliable
+detection.
+5. Common Problems and Solutions
+frequently asked question cause analysis resolvent
+Afterconnectingtothe
+powersupply,thesensor
+indicatorlightdoesnot
+respond
+1. Isthepowersupplynormaland
+meetstheworkingvoltageofthe
+sensor?
+Checkifthepowersupplymeetsthe
+workingvoltageofthesensor
+2.Istheindicatorlightdamaged?
+Contactafter-salespersonnelandreturnto
+thefactoryforrepair
+Inthepresenceofsomeone,
+the sensor cannot detect
+someone
+1.Isthedetectionareasettoosmall?
+Resetthematchingdetectionareabased
+onthescene
+2.Isthesensitivitysettingtoolow?
+Adjustthecorrespondingsensitivity
+accordingtothescenario
+
+18
+User's manualV1.1
+3.Isthesensorinstalledproperly?
+Ensurethatthesensorisinstallednormally
+withoutobstruction,ensuringthatthe
+sensorisinstallednormallywithout
+obstruction
+4.Isthedelaytimesettooshort? Ensureadelaytimeof30secondsormore
+Sensorsdetectsomeonein
+anunmannedstate
+1.Isthereanyinterferencesourceinthe
+environment?
+Eliminateinterferencesourcesinthe
+environment
+2.Isthedetectionareatoolarge?
+Resetthematchingdetectionareabased
+onthescene
+3.Isthesensitivitysettingtoohigh?
+Adjustthecorrespondingsensitivity
+accordingtothescenario
+
+19
+User's manualV1.1
+6. Special Instructions for the Sensor
+Duetothecharacteristicsofmicrowavetechnology,theidealdetectionresultswillnotappearin
+some application scenarios, or the ideal detection results should be obtained under the right
+conditions.
+TheMTDx61drycontactseriessensorsaresensorswithhighdetectionperformance,whichcan
+detect microdynamic changes that cannot be seen by the human eye. If you encounter a different
+performance than expected in the test, please contact us to provide detailed technical support, so as
+not to affect the use of parameter setting errors, and the sensor is unable to play the best detection
+performance.
+The default configuration parameters of MTDx61dry contact series sensors are not suitable for
+the actual scenarios of all users. Please be sure to reconfigure the sensor parameters so that the
+working parameters of the sensor are suitable for the use scenarios to achieve better test effect and
+performance.
+1. Detectiontechnology:Weakmotiondetectiontechnologyattherespiratorylevel:
+(1) The current version of the sensor can detect the fluctuation range as low as 1 mm or speed as low as 3
+mm/s,andmosthumanbreathingmovement,bodymicromovement,itsfluctuationrangeismuchgreater
+than 1 mm or more than 3 mm / s, so it can be highly sensitive to identify whether there is a human
+body;
+(2) Fromtheusepointofview,itcanbeunderstoodasmotiondetectionwithhighersensitivitybutlowerfalse
+positiverate,andcanstablyandreliablydetectweakundulatingmovementssuchasrespiration.
+2.Limitationsofthe"weakmotiondetectiontechnology":
+(1)Dithering air conditioners, fans, washing machines; shaking curtains, green plants; shaking large
+metal equipment, ventilation pipes, fire pipes, drainage pipes; motion frequency or harmonic
+frequencyofinvisiblevibrationinhumaneyesfallsintothehumanrespiratoryfrequencyrange,and
+maybeobservedbysensorsandmistakenfor"humanbodyexistence";
+(2) Eliminatetheinterferenceofshakingorshakingobjects,andexcludetheinterferenceareabysetting
+the maximum detection distance, or by adjusting the mounting position to prevent the beam from
+directly or indirectly reflecting the interference. Or for the presence of a fixed interference source,
+thegeneralversionofthesensorcannotsolve,theinterferencealgorithmcanbecustomizedtofilter
+theinterferenceinterference(suchaselectricfan,airconditioning,bathbully,etc.).
+3.Relativemovementisrequired:
+(1)Because the sensor has the highest sensitivity to the radial motion (relative motion) of the target
+detection, the longest detection distance, and it is easier to detect the target. Therefore, the best
+installation method is: horizontal installation> oblique downward installation> top installation;
+however, when using the detection function, top installation is recommended, because horizontal
+installationandobliquedownwardinstallationwillhaveacertaindetectionblindarea.
+
+20
+User's manualV1.1
+(2) Ontop,thebestrelativemovementisupanddown;themotionintheupperandlowerdirection;
+(3)Top loading, a certaindistance fromthesensor of the human body, the beam is oblique irradiation to
+the body, the level of the body in the upper and lower direction of the movement component, so it
+candetectthepresenceofpeople;
+(4)At the top, sitting directly under the sensor and the body does not shake, only breathing movement,
+because the breathing movement is horizontal movement, there is no movement component in the
+upper and lowerdirection, the sensor willnot detect the presence of someone. In this case, the
+sensor delay time is generally increased, so that in a longer observation time, the probability of the
+human body directly under the sensor becomes smaller, then the probability of detecting the
+existenceofthehumanbodywillincrease,andtheomissionrateisreduced;
+(5) Horizontalinstallation:onlyirradiationtothefoot,willnotbeabletodetectthehumanpresence.
+4. SensorAngle
+(1) Electromagneticwaves,likeaflashlight,haveenergy beyondtheedge,andthelightneartheedgeis
+there, but relatively weak. For example, the sensor of 120120,120 represents the antenna radiation
+angle, which is the angle measured when the signal energy is 0, not the target detection angle that
+can be detected, and the central cross section of the detection area is not a triangular detection
+surfacelikeanopening120.
+(2) The size and distance of the detection area are related to the volume, relative angle, and motion
+speedofthedetectedtarget.Forhorizontalinstallation:thelargerthetargetvolume,theeasieritisto
+be detected; The smaller the relative angle (such as forward relative motion), the easier it is to be
+detected.
+5. signalenhancement
+Due to the multi-path propagation effect of the signal microwave, the reflection signal will be
+enhanced in the closed and many obstacle environment, so that the sensor detection performance is
+better. Set the same configuration parameters in a small area will be better than a large area
+conferenceroom;smallroomswillbebetterthanthehall.
+
+21
+User's manualV1.1
+7. Remote Control Setting Parameters
+The dry contact version of the sensor also supports remote control configuration
+parameters, on-site installation, debugging, and maintenance management
+1． Remote control instructions
+2． Supplementary instructions for function keys
+(1) 【ON/OFF】key：
+Userscanusethisbuttontomaketheoutputsignalnormallyopenornormallyclosed.
+(2) 【lock】 key：
+Thesensorisinthe"unlocked"statebydefaultatthefactory,anduserscandirectlyoperate
+it using the remote control. During normal use of the sensor, if encountering interference
+from the remote control of other electrical appliances, the sensor can be locked by long
+pressingtoprohibitremotecontroloperation.
+(3) 【 Reset/RestoreFactory 】 key
+Whenthesensorisinthemanualremotecontroloutputorclosedoutputstate,pressthe
+resetbuttontorestorethesensortotheinductionoutputstate;Longpressthisbuttonto
+restorethesensorparameterstothedefaultstate:sensitivity7,detectiondistance6meters,
+anddelaytime15seconds.
+(4) 【 Lightsensitivity 】 key:
+Shortpresstoconfigurethelightsensitivity,withavaluerangeof0-45Lux;Ifthelight
+
+22
+User's manualV1.1
+sensingfunctionisnotrequired,configurethelightsensingvalueto255or0toturnoffthe
+lightsensingfunction.
+Longpresstheconfigurationtotriggertheindentationdistance,withavaluerangeof0-9m
+andadefaultof0.6m.Thelargerthevalue,themoreindentation,andthesmallerthe
+triggeringradius,andviceversa.
+(5) 【Sensitivity】 key:
+Shortpresstheconfigurationtomaintainsensitivity,withavaluerangeof0-9andadefault
+of7.Thehigherthevalue,thehigherthesensitivity.
+Longpresstheconfigurationtotriggersensitivity,withavaluerangeof0-9andadefaultof
+5.Thelargerthevalue,thehigherthesensitivity.
+(6) 【ConfirmDelay】 key
+1) The configurable value range is 0-10s, with one decimal place remaining
+valid. Excess decimal points and decimal values will be ignored by the sensor.
+2) The confirmation time after detecting the target and configuring the optimal
+parameter values can greatly reduce the false alarm rate. Although the higher
+the value, the more reliable it is, when a true target appears, the sensor
+needs to take a longer time to report that the target has been detected.
+(7) 【 DisappearanceDelay 】 key:
+1) The configurable value range is 0.5~1500s, with one decimal place remaining valid.
+Excess decimal points and decimal values will be ignored by the sensor.
+2) The delay time after "target disappearance", the larger the configured parameter
+value, the easier it is to reduce missed alarms caused by accidental target
+disappearance. Although the higher the value, the more reliable it is, when the target
+truly disappears, the sensor needs to take a longer time to report that the target
+has disappeared. For scenarios where the response speed requirement is not high after
+the target disappears, it is recommended to set it to more than 15 seconds or longer,
+such as 30 seconds, 60 seconds, 90 seconds, etc.
+(8) 【 farthestdistance 】 key:
+1) Short press to configure the farthest detection distance: value range 0-9m,
+default to 7m
+5.8G radar module: value range 0-10m, default 7m;
+24G radar module: value range 0-12m, default 7m;
+
+23
+User's manualV1.1
+2) Long press to configure the nearest detection distance
+5.8G radar module: value range 0-10m, default 0.6m;
+24G radar module: value range 0-12m, default 2m;
+Sensors will only detect targets located between the closest and farthest
+distances. For example, if the nearest distance is 1 meter and the farthest
+distance is 3 meters, the sensor will not detect targets within 1 meter or
+greater than 3 meters.
+(9) 【OK】 key:
+After pressing the [Light Sensitivity], [Sensitivity], [Delay], or [Maximum Distance] keys
+on the remote control, input the parameter values. Finally, press the [Confirm] key before
+thesensorwillstoreandusethenewparametervalues,otherwisetheywillnotbeused.
+(10)【•/Buzzer】key:
+Thedefaultbuzzerison,andasoundwillsoundwhentheremotecontrolbuttonispressed.
+If the buzzer needs to be turned off, long press and hold the button to turn off the buzzer;
+Pressandholdagaintoturnonthebuzzer.
+(11)【 0/LEDswitch 】 key:
+The default LED indicator light turns off when working normally, and flashes or lights up
+when abnormal. Long press and hold this button to turn off the indicator light (it will still
+flash when the remote control is in use), and it will no longer flash or light up in case of
+abnormalities.Pressandholdagaintoturnontheindicatorlight.
+(12) Quickparameterconfiguration:Userscanquicklyconfiguretypicalparametersbylong
+pressingthesebuttons.
+[Configuration 1] key, with the following parameters, suitable for scenarios such as
+bathroomsandkitchens:
+Sensitivity: 6;Thenearestdetectiondistanceis0.9m;Thefarthestdetectiondistanceis
+2.4m;Targetconfirmationtimeis0.2seconds;Delaytimeof20seconds;
+[Configuration 2] key, with the following parameters, suitable for scenarios such as
+studyandbedroom:
+Sensitivity: 8, nearest detection distance 0.9m, farthest detection distance 3m, target
+confirmationtime0.5s,delaytime120s;
+[Configuration 3] key: The parameters are as follows, suitable for living rooms, halls,
+conferencerooms,andotherspaces:
+
+24
+User's manualV1.1
+Sensitivity: 7;Thenearestdetectiondistanceis0.6m;Thefarthestdetectiondistanceis
+6m;Targetconfirmationtime0.1;Delaytimeof60seconds;
+(13) 【BatteryProtectionSheet】:
+Before using the remote control, please remove the plastic sheet that isolates the battery to
+ensure that the remote control is powered on and working properly. It is recommended to
+keep the plastic sheet and insert it back when the remote control is not frequently used to
+protectit.
+Reminder:
+(1)After pressing the [Light Sensitivity], [Sensitivity], [Delay], or [Maximum Distance] buttons, if
+thereisnooperationwithin5seconds,thesensorwilltimeoutandexittheconfigurationstate;
+(2) 【 • 】, 【 0 】, 【 1 】, 【 2 】, 【 3 】, 【 4 】, 【 5 】, 【 6 】, 【 7 】, 【 8 】,
+【 9 】 arenumericalcombinationkeysusedforparametervalueinput.
+3.Example
+(1)Setsensitivityto8:
+Operation steps: In the remote control unlocking state, first press the [Sensitivity] key to
+entertheconfigurationstate, thenpressthenumberkey[8],andfinallypressthe[Confirm]
+keytotakeeffect.
+(2)Ifthemaximumdetectiondistanceissetto6.5meters:
+Operation steps: In the remote control unlocking state, first press the [farthest distance]
+buttontoentertheconfigurationstate,thenpressthenumberkey[6],decimalpointkey[•],
+numberkey[5],andfinallypressthe[confirm]buttontotakeeffect.
+(3)Toquicklyconfiguretheparametersofparametergroup2:
+Operationsteps: In the remote control unlocking state, press the [8/Configuration 2] button
+formorethan3seconds.
+(4)Restorefactoryconfiguration:
+Press the 'Restore Factory' button for more than 3 seconds while the remote control is
+unlocked.

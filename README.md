@@ -11,6 +11,52 @@ Built on [`modbus-connection`](https://home-assistant-libs.github.io/modbus-conn
 caller owns the connection and hands over a `ModbusUnit`. The library never opens a socket or a
 serial port and has no dependency on Home Assistant.
 
+## The device
+
+Ceiling-mounted radar sensor. It reports presence, ambient light and the distance to the detected
+target, and keeps its own configuration in holding registers.
+
+### The family
+
+One housing, four models: two speak Modbus, two switch a dry contact. Only the Modbus ones are
+covered by this library, and the register map is identical between them.
+
+| Model | Radio | Interface | Covered here |
+|---|---|---|---|
+| MTD062-MB | 5.8 GHz | Modbus RTU over RS485 | yes |
+| MTD262-MB | 24 GHz | Modbus RTU over RS485 | yes |
+| MTD061-RC | 5.8 GHz | dry contact, ≤ 24 V, ≤ 100 mA | no |
+| MTD261-RC | 24 GHz | dry contact, ≤ 24 V, ≤ 100 mA | no |
+
+Both kinds are configured with the same infrared remote. The manuals for the Modbus and the
+dry-contact series are both in [`docs/sources/`](docs/sources/), so the difference is visible
+before buying the wrong one.
+
+Devices that look the same are also sold under other names, and Bluetooth variants exist. Check
+the label before buying: this library speaks Modbus RTU only.
+
+### Outside
+
+| | | |
+|---|---|---|
+| ![Overview with the infrared remote](docs/images/device-overview.webp) | ![Angled view](docs/images/device-angled.webp) | ![Side view](docs/images/device-side.webp) |
+| *Overview with the infrared remote* | *Angled view* | *Side view* |
+
+![Dimensions](docs/images/device-dimensions.webp)
+
+*Dimensions, millimetres*
+
+### Inside
+
+| | |
+|---|---|
+| ![Inside the three hardware versions, angled](docs/images/device-internals-angled.webp) | ![Inside the three hardware versions, front](docs/images/device-internals-front.webp) |
+| *Inside all three hardware versions, angled* | *Inside all three hardware versions, front* |
+
+Pictures come from the vendor's product material. What the device actually does — register
+values, the self-check timeline, how it reacts to a cut bus — is in
+[`docs/DEVICE-FACTS.md`](docs/DEVICE-FACTS.md).
+
 ## Install
 
 ```bash
