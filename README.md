@@ -11,6 +11,12 @@ Built on [`modbus-connection`](https://home-assistant-libs.github.io/modbus-conn
 caller owns the connection and hands over a `ModbusUnit`. The library never opens a socket or a
 serial port and has no dependency on Home Assistant.
 
+The dependency is pinned to `modbus-connection>=4.12.8`. Earlier releases close a connection and
+reopen it when a unit asks for a longer timeout, which races with the next request
+([issue 269](https://github.com/home-assistant-libs/modbus-connection/issues/269)); 4.12.8 keeps
+the link open instead. On a serial bus that race shows up as a port that refuses to open until
+the stale connection goes away.
+
 ## The device
 
 Ceiling-mounted radar sensor. It reports presence, ambient light and the distance to the detected

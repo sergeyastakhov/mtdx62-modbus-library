@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mtdx62-modbus-library"
-version = "0.3.0"
+version = "0.3.1"
 description = "Device library for the MTD062-MB and MTD262-MB Modbus presence sensors"
 readme = "README.md"
 requires-python = ">=3.14"
@@ -18,7 +18,7 @@ classifiers = [
   "Programming Language :: Python :: 3.14",
   "Typing :: Typed",
 ]
-dependencies = ["modbus-connection>=4.12.4,<5"]
+dependencies = ["modbus-connection>=4.12.8,<5"]
 
 [project.optional-dependencies]
 test = [

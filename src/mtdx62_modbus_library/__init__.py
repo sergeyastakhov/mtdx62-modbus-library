@@ -10,7 +10,7 @@ from .device import Mtdx62Device as Mtdx62Device
 from .readings import Readings as Readings
 from .settings import Settings as Settings
 
-__version__ = "0.3.0"
+__version__ = "0.3.1"
 
 __all__ = [
     "ALL",
