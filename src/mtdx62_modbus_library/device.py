@@ -21,9 +21,11 @@ ALL = (*READINGS, *SETTINGS)
 class Mtdx62Device(Device):
     """An MTD062-MB or MTD262-MB presence sensor.
 
-    The caller owns the connection and passes the unit; this object only reads
-    registers. Measurements and parameters refresh on separate calls, because
-    measurements are polled constantly and parameters only when diagnosing.
+    The caller owns the connection and passes the unit. Measurements and
+    parameters refresh on separate calls, because measurements are polled
+    constantly and parameters only when diagnosing or changing them. Parameters
+    are written through `settings.async_write`, which confirms the value by
+    reading it back.
     """
 
     def __init__(self, unit: ModbusUnit) -> None:

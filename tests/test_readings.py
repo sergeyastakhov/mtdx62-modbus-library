@@ -161,13 +161,23 @@ async def test_timeout_propagates(mock_modbus_unit: MockModbusUnit) -> None:
         await device.async_update_readings()
 
 
-async def test_fields_are_read_only(mock_modbus_unit: MockModbusUnit) -> None:
-    """Read-only by construction: no field accepts a write, in either sub-system."""
+async def test_readings_are_read_only(mock_modbus_unit: MockModbusUnit) -> None:
+    """Measurements come from input registers, which take no writes at all."""
     device = Mtdx62Device(mock_modbus_unit)
 
-    for component in (device.readings, device.settings):
-        assert component.resolved_fields
-        for name, resolved in component.resolved_fields.items():
-            assert resolved.field.writable is False, f"{name} is writable"
-            with pytest.raises(AttributeError):
-                await component.write(name, 1)
+    assert device.readings.resolved_fields
+    for name, resolved in device.readings.resolved_fields.items():
+        assert resolved.field.writable is False, f"{name} is writable"
+        with pytest.raises(AttributeError):
+            await device.readings.write(name, 1)
+
+
+async def test_every_setting_but_the_unknown_one_is_writable(
+    mock_modbus_unit: MockModbusUnit,
+) -> None:
+    """The register map is the contract: described parameters can be written."""
+    device = Mtdx62Device(mock_modbus_unit)
+
+    writable = {spec.address for spec in device.settings.writable_fields()}
+    for name, resolved in device.settings.resolved_fields.items():
+        assert bool(resolved.field.writable) is (resolved.address in writable), name

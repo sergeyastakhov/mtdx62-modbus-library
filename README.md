@@ -111,9 +111,46 @@ asyncio.run(main())
 
 Every attribute is `None` until the first read of its sub-system.
 
-The library only reads: no field is writable, and the sensor's configuration is not changed by
-it. Reading the configuration is a separate call (`async_update_settings()`) precisely so that a
+Reading the configuration is a separate call (`async_update_settings()`) precisely so that a
 5-second poll costs one request.
+
+## Writing parameters
+
+Every parameter the vendor register map describes can be written; `0x000D` cannot, because nobody
+knows what it holds. The value is expressed in the units the reading uses, and the library checks it
+against the map before anything reaches the bus:
+
+```python
+await device.settings.async_write("departure_delay", 60)
+await device.settings.async_write("detection_distance", 4.5)
+
+for spec in device.settings.writable_fields():
+    print(spec.name, spec.minimum, spec.maximum, spec.step, spec.unit)
+```
+
+`writable_fields()` is what a UI should build its controls from: name, limits, step, unit and the raw
+register bounds, so the range is not copied into a second place.
+
+After the write the library reads the parameter block and compares. A device that stores something
+else raises `WriteVerificationError` carrying both values instead of pretending the write worked; a
+successful call leaves `settings` filled from that same read, so no extra poll is needed.
+
+Write is a tool, not a policy. The library deliberately does **not**:
+
+- check the device's health code first — a script changing ten parameters would pay ten extra reads,
+  and whether a faulting device should be configured is the caller's call;
+- change the unit's own address, baud rate or parity when those registers are written, or reconnect;
+- know that `active_report = 1` makes the device talk on its own.
+
+Three consequences worth a thought before writing:
+
+- `unit_id`, `baudrate` and `parity` describe how the device answers. Whether a new value applies
+  immediately or after a power cycle is not verified yet (see `docs/DEVICE-FACTS.md`); if it applies
+  at once, the current link stops working and the caller has to reconnect with the new settings.
+- `active_report` switches the device into push mode. On a shared bus that means frames nobody asked
+  for, so a poll-based consumer should leave it off.
+- Writing `light_threshold` and `report_interval` rests on a register map that two vendor sources
+  describe differently; the library writes exactly the documented address and never guesses.
 
 ## Health codes
 
@@ -141,6 +178,15 @@ An undocumented code decodes to `None`, while `status_code` keeps the raw number
 The library raises whatever `modbus-connection` raises: a timeout, a protocol error, or a
 refusal of the addressed registers. It does not wrap them, so the caller can tell a dead link
 from a slow device.
+
+Its own errors derive from `Mtdx62Error`, so one `except` clause catches them all:
+
+| Error | When |
+|---|---|
+| `WriteVerificationError` | the device accepted the write but reports a different value; carries `field`, `requested` and `stored` |
+
+A value outside the register map, or of the wrong type, raises `ValueError` before anything is sent.
+An unknown or unwritable parameter raises `AttributeError`.
 
 ## Supported firmware
 
