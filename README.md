@@ -52,7 +52,8 @@ asyncio.run(main())
 | `readings.illuminance` | ambient light as the sensor sees it | lx |
 | `readings.distance` | distance to the detected target | m, centimetre resolution |
 | `readings.status_code` | raw health code | — |
-| `readings.status` | health code as `DeviceStatus`, `None` when unknown | — || `readings.app_version` | application firmware version, `1.2.3` | — |
+| `readings.status` | health code as `DeviceStatus`, `None` when unknown | — |
+| `readings.app_version` | application firmware version, `1.2.3` | — |
 | `readings.radar_version` | radar module firmware version | — |
 | `settings.*` | detection range, delays, sensitivities, bus address and speed | see `Settings` |
 
