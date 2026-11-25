@@ -92,8 +92,9 @@ from a slow device.
 ## Supported firmware
 
 Written against the vendor documentation for firmware **1.6**. The register map is in
-`openspec/specs/mtdx62-registers/` once the first change is archived, and the raw facts are in
-`references/mtdx62/DEVICE-FACTS.md` in the project workspace.
+`openspec/specs/mtdx62-registers/`, and what the device actually does — register values, the
+self-check timeline, how it reacts to a cut bus — is in [`docs/DEVICE-FACTS.md`](docs/DEVICE-FACTS.md)
+together with the vendor material it was derived from.
 
 ## Tests
 

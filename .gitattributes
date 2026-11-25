@@ -1,0 +1,7 @@
+# Keep line endings consistent: the repository stores LF, whatever the working copy.
+* text=auto eol=lf
+
+*.pdf binary
+*.png binary
+*.webp binary
+*.avif binary

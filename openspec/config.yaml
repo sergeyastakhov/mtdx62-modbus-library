@@ -12,7 +12,8 @@ context: |
   Библиотека строится на `modbus-connection` и принимает `ModbusUnit`: соединение ей не
   принадлежит, юнит передаёт вызывающая сторона.
 
-  Факты об устройстве и карта регистров — `references/mtdx62/DEVICE-FACTS.md`.
+  Факты об устройстве и карта регистров — `docs/DEVICE-FACTS.md` этого репозитория,
+  материалы производителя — `docs/sources/`, распознанный текст — `docs/extracted-text/`.
   Стек: Python 3.14, `modbus-connection` с бэкендом `tmodbus`, тесты на mock-бэкенде.
 
 rules:

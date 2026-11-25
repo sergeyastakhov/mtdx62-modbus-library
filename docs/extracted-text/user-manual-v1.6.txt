@@ -1,0 +1,1010 @@
+
+===== PAGE 1 =====
+MTD062-MB/MTD262-MB 
+Human body presence sensor
+User Manual (V1.6)
+Manufacturer:
+Zhejiang Oujue Electronic Technology Co., Ltd.
+Address: No. 33,Jianxin Road, Furong Town, Industrial 
+Zone,Wenzhou City, Zhejiang Province, China
+Tel: +86-15067770797
+After-sale Service: John@shojzj.com
+32
+Thank you for your support and purchase at we shojzj, we are always here for your complete satisfaction, just feel 
+free to share 
+If you have any other need, please do not hesitate to contact us 
+===== PAGE 2 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+2
+Copyright Notice
+Thehardware,software,materials,etc.involvedinthisdocumentareownedbythecompany,andthe
+companyreservesallrights. Therighttomodifythisdocument,theproductsandrelatedcopyrightsstated
+inthisdocumentbelongtothecompany,andtheirpropertyrightsareabsolutelyprotectedbynationallaws.
+Without authorization from the company, other companies, units and individuals are not allowed to
+illegallyuseandcopy.
+statement
+Pleasereadthisstatementcarefullybeforeusingtheproductdescribedinthisdocument. Once
+used,itshallbedeemedasrecognitionandacceptanceofthecontentsofthisstatement.
+When using microwave human body micro motion sensing sensors, users must retest according to their
+ownapplicationrequirementsbasedontheproductcharacteristics,performance,andfunctionsdescribedinthis
+documenttoconfirmthattheymeettheuser'sapplicationneeds. Thecompanyshallnotbeliableforanylosses
+ordamagescausedbyimproperuse.
+Duetocontinuousupdatesanditerations,thedocumentationofthisproductmaychangewithout
+priornotice.Pleaseconfirmtheupdatesanderratainformationthroughappropriatechannelswhen
+applying.Weapologizeforanyinconveniencecausedandthefinalinterpretationrightsbelongtothe
+company.
+===== PAGE 3 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+3
+The MTD062-MB/MTD262-MB human presence sensor must be installed and debugged by the manufacturer or its authorized agent, 
+otherwise it may endanger personal safety and cause MTD062-MB/MTD262-MB human presence sensor failure. The MTD062-MB/
+MTD262-MB human sensor damage caused by this is not covered by the warranty.
+2. It is strictly prohibited to install or dismantle equipment with electricity.
+3. It is strictly prohibited to place the MTD062-MB/MTD262-MB human presence sensor in fire to avoid explosion and 
+endanger personal safety.
+4. It is strictly prohibited to dismantle and repairwithout authorization.
+warni
+Safety precautions
+Safetysigns
+This manual uses the following safety signs, please be sure to follow them.
+Safetysigns explain
+Improperusecancausedangeroussituationsandmayleadtopersonalinjuryordeath.
+Improperusecancausedangeroussituationsthatmayresultinpersonalinjuryand
+equipmentdamage.
+Carefullyreadandfollowtheinstructionstooperatetheequipment.
+Before starting the operation, please carefully read the operating instructions and precautions to reduce the
+occurrence of accidents. The "Caution, Caution, Warning, Danger" instructions in the product and user manual do not
+represent all safety precautions to be followed, but only serve as a supplement to various operational safety precautions.
+Therefore, personnel responsible for product installation and operation must undergo strict training, master the correct
+operating methods and various safety precautions of the system before carrying out various equipment operations.
+When operating our company's products and equipment, it is necessary to comply with relevant industry safety
+regulations, strictly follow relevant equipment precautions and special safety instructions.
+Electricalsafety
+This manual covers the installation and use of the BP100-DC human presence sensor.
+Please strictly follow all warning signs and operating instructions in this manual. Do not operate the equipment
+until you have read all safety and operating instructions.
+===== PAGE 4 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+4
+1. It is prohibited to use the MTD062-MB/MTD262-MB human presence sensor in elevators, metal panel rooms (less than 6m x 
+6m space), metal sealed toilets, and similar all metal sealed spaces; Not recommended for use in scenarios where the surface 
+area of metal decorative materials outside the ceiling exceeds 20%. The above scenarios and sensor characteristics do not match, 
+which can lead to abnormal usage.
+2. It is prohibited to install MTD062-MB/MTD262-MB human presence sensors, routers, or other high-power WIFI devices close to each 
+other. Please refer to section 5.4 for specific installation spacing requirements.
+3. When deploying densely in large spaces, please strictly follow the spacing requirements for deployment. Please refer to section 5.4 for 
+installation principles.
+4. TheBP100-DChumanpresencesensorisembeddedintheceilingandisnotrecommendedtobeinstalledhorizontally,whichmayaffectthe
+detectioneffect.
+Pleasereadandunderstandcarefullybeforeuse
+Precautionsforuse
+1. The standard model MTD062-MB/MTD262-MB has an external control signal for the human body sensor. Before operation, it must be 
+carried out under power-off conditions and must be operated by professionals. Unauthorized operation is prohibited.
+2. The usage environment and storage methods have a certain impact on the service life and reliability of the MTD062-MB/MTD262-MB 
+human presence sensor. Avoid long-term use of the MTD062-MB/MTD262-MB human presence sensor in the following working 
+environments:
+Hightemperature,lowtemperatureorhumidplacesbeyondthetechnicals
+pecificationsofthisproduct Places withconductive dust, corrosive gases, 
+salt spray,orflammable gases Placeswithvibrationandsusceptibilitytoimpact 
+Placesclosetoheatsourcesorwithstrongelectromagneticfieldinterference
+3. Liquids or other foreign objects are not allowed to enter the MTD062-MB/MTD262-MB human presence sensor.
+4. If the equipment or its surroundings catch fire, first cut off the power supply; Dry powder fire extinguishers must be used to extinguish 
+the fire, and using liquid fire extinguishers may pose a risk of electric shock.
+5. If left unused for a long time, the MTD062-MB/MTD262-MB human presence sensor must be stored in a dry environment. The 
+storage temperature and humidity range of the standard model MTD062-MB/MTD262-MB human presence sensor is -20 ℃~+65 ℃, 
+40~60% RH.
+be
+caref
+===== PAGE 5 =====
+MTD062-MB/
+MTD262-MBZhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+5
+catalogue
+CopyrightNotice ...................................................................................................................................2
+Declaration ............................................................................................................................................2
+Safetyprecautions .................................................................................................................................3
+1. ProductParameters...........................................................................................................................6
+2. Interfacesize ....................................................................................................................................9
+2.1 Interface..........................................................................................................................................................9
+2.2 Size ................................................................................................................................................................9
+2.3 Wiring ............................................................................................................................................................9
+3. Productinstallation.........................................................................................................................10
+3.1 InstallationMethod1:EmbeddedInstallation ..............................................................................................10
+3.2 InstallationMethod2:BracketInstallation...................................................................................................11
+4. Productusage .................................................................................................................................11
+4.1 Outputsignalconnectedtousersystem........................................................................................................11
+4.2 Sensorpowersupply ....................................................................................................................................11
+4.3 Useremotecontroltoconfigureparameter ..................................................................................................12
+4.4 Recommendedparameterconfigurationsfordifferentscenarios..................................................................12
+4.5 Installationprinciple .....................................................................................................................................13
+4.6 Commonsourcesofinterferenceandsolutions ............................................................................................13
+5. CommonProblemsandSolutions ..................................................................................................15
+6. SpecialInstructionsforSensors .....................................................................................................15
+7. Remotecontrolsettingparameters .................................................................................................17
+===== PAGE 6 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+6
+1. Product parameters
+1.1 main parameter
+Productmodel
+ 5.8GHz/24GH
+MTD062-MB/MTD262-MB
+Parameteritems
+ describe
+Phy
+sical
+para
+met
+ers
+Productsize Themaximumdiameteroftheouteredgeis50mm,theheightis37mm,andthereisacircularholewithan
+openingof40-42mm
+colour CeramicWhite
+weight ≤40g
+Ind
+ucti
+on
+para
+met
+ers
+Beamangle 120 × 120 °,theangleatwhichthesignalenergydecaysby6dB(75%attenuation)relativeto
+0 ° infront
+Topmounted:
+detectingradius
+·Respiratorydetectionradius:2.5-3meters
+·Micromotiondetectionradius:3-4meters
+·Motiondetectionradius:4-5.5m
+Topmounted:
+installationheight
+Typicalheight:2.7-3.5m
+1～9； Minimumsensitivity1,maximumsensitivity9; Default7
+sensitivity notes:
+Thelargerthevalue,themoresensitiveitis.Sensitivitywithin6canonlybeusedformotion
+detection,whilesensitivitybetween7-9canbeusedforrespiratorydetection,indicatingreliability
+Itisrelatedtothe"delayfrommannedtounmanned"(refertotherecommendedparameter
+configurationfordifferentscenariosforcorrespondingsettings).
+1.2～10m； Defaultdetectiondistanceof6m
+notes:
+1.Detectiondistancereferstothefarthestdistancefromthesensortothestraightlinethatcandetect
+motion,micromotion,andbreathingtargets,whichisnotmappedtotheground
+Detection
+distance
+Themaximumdiameterorradius.
+2.Thedistanceisnotanabsolutedistance,andthesensordetectionhasadistanceresolutionofabout
+1m. Ifsetto3m,at3mposition ±
+Triggeringwithina1mintervalisconsiderednormal.
+3.Thedistancevalueismainlyusedforfilteringglasspartitions,gypsumboards,andwooden
+partitions,andisnotstrictlydividedintodetectionareas
+Whenusingagrid,ifsetto3m,theremayalsobemissedalarmsorfalsetoucheswithin ± 0.5mofthe3m
+position.
+2～64800s； Default15seconds; Practicalusagerecommendationis15-180seconds.Ifitistoo
+small,itiseasytomissthereport,andifitistoolarge,itwillaffecttheexperience
+Departuredelay notes:
+(Fromsomeoneto
+noone)
+Thisdelayrepresents:1.thetimewhenthesensortriggersthepersontoleaveandbecomeunmanned;
+2.Thesensortriggerswithinthedelaytime,continue
+Delayaccordingly. 3.Theobservationwindowofthesensor,thelongerthedelay,thelowerthe
+probabilityofsensorfalsepositives,andtherespiratorydetectiondelayshouldnotbelessthan60
+seconds.
+Admissionfiltering
+time
+0~0.5s； Default0 05s； Stepsetting:0.05s
+The longerthe setting time, the slower the sensor response andthe less likelyit is totrigger incorrectly;
+Thetimesettingisshortandtheresponseisfast,buttheprobabilityoferrorincreases. Inpracticaluse,it
+is recommended to set the sensor response time to no more than 0.25s, as a response time greater than
+0.25sisconsideredslow.
+Note: The main function is to solve the following interferences: 1. False triggering caused by
+rapidflashinginandoutofthedetectionboundary.2.Installingsensorsinenvironmentsthatmay
+experience momentary shaking to avoid false triggering. 3. Installing in environments with large
+changesinwindpressurethatcaneasilycausemomentaryvibration.
+(Nooneto someone)
+===== PAGE 7 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+7
+Thedetectionvalueisnottheabsolutevalueofenvironmentallighting,whichislimitedbyfactors
+suchasinstallationdirectionandlightingangle,andcanonlyroughlyreflectthetrendof
+environmentalbrightness.
+Linkagecontrol Supportlightsensinglinkagecontrolanddynamicconfigurationoflinkageparameters
+syst
+em
+para
+met
+er
+mi
+cro
+wa
+ve
+working
+frequency
+5.8GHz±75MHz,ISMband
+Transmitting
+power(Pt)
+3～5dBm
+Modulation
+mode
+FMCW,CW
+Wo
+rkin
+g
+con
+ditio
+ns
+workingvoltage DC9-28V,typical12V
+Workingpower ＜1W
+working
+temperature
+-5℃~+50℃
+Storage
+temperature
+-20℃～65 ℃
+Working
+humidity
+5-90%RH(nocondensation)
+Working
+altitude
+0-2800m
+Protectionlevel IP20
+outp
+ut
+Outputmethod Relayoutput; Voltage ≤ 30V,current ≤ 2A
+othe
+r
+Installation
+requirements
+Installationheight:2.7-3.5m; Installationmethod:Embedded; Holesize:circularholewitha
+diameterof40-42mm
+Inputterminal Wireharnessconnection,withabuilt-in0.1mwireharness.Itisrecommendedtouseterminalblocksfor
+extension
+Restrictedusage
+scenarios
+Insideelevators,metalpanelrooms(lessthan6mx6mspace),metalsealedtoilets,andsimilarallmetal
+sealedspaces; Scenarioswheretheplanarareaofmetaldecorativematerialsoutsidethesuspended
+ceilingexceeds20%
+
+===== PAGE 8 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+8
+Ceiling
+installation
+2.7~3.5m
+Breathingdetection
+area
+Micromotion
+1.2 Product factory default settings
+Serial
+number
+Parameteritems Value/Status
+one Detectiondistance 6m
+two Detectingshieldingdistance 0.6m
+three Admissionfilteringtime 0.05s
+four Departuredelaytime 30s
+five Entrysensitivity seven
+six sensitivity seven
+seven Entrancedistancereduction 0.6m
+eight Lightthreshold 0:Close
+1.3 Detection range: Top mounted
+Thefollowingisaroughschematicdiagramofthedetectableareaofthesensorwheninstalledon
+top.
+(1) Existence"(standingstill,squattingstill,sittingstill,sleeping);
+(2) Micromotiondetectionarea:capableofdetectingmicromovements(suchastiltingthehead,
+waving,raisingthehand,gettingup,flippingthroughbooks,andshakingthebodybackand
+forth);
+(3) Exercise"(walking,jogging,running,spinning,jumping,etc.);
+5.8Gradarmodule
+Detectioncoveragerange(relatedtoinstallationheightand
+sensitivityparameters):
+lDetectionradiusduringtopinstallation:2.5-3meters
+forhumanrespiration
+lDetectionradiusduringtopinstallation:3-4meters
+forhumanbodymicromovements
+lDetectionradiusduringtopinstallation:4-5.5meters
+forhumanmotion
+Motiondetectionarea
+Note:1.Theaboverangevaluesarebasedontheconferenceroomscenewithatopmountedheight
+of3mandalengthandwidthof10x10m.Parameterconfigurationsincludesensitivityof7-9,adelay
+of60sfrommannedtounmanned,andadetectiondistanceof9m.Theremaybesomedifferencesin
+===== PAGE 9 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+9
+differentscenarios.
+2.Thedetectableradiusisrelatedtomanyfactorssuchasinstallationenvironment,humanbody
+shape,relativeangle,andmicromotion/movementamplitude.Theaboveparametersarethetestresults
+ofourtestingpersonnelusingsensors.Thedescriptionofmicromotionandmovementisqualitative,
+notquantitative,andisforreferenceonly. Underdifferenttestingconditions,pleaserefertotheactual
+measurementforaccuracy.
+===== PAGE 10 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+10
+Tip:Duringinstallation,itis
+recommendedtoopenacircular
+holewithadiameterof40-42mm
+ontheceiling
+2. Interface size
+2.1 Interface
+2.2 size
+The MTD062-MB/MTD262-MB sensor adopts an embedded ceiling installation method, with an 
+outer edge of 50mm; The dimensions of the embedded ceiling are: diameter x height=40 x 35mm.
+===== PAGE 11 =====
+MTD062-MB/
+MTD262-MBZhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+11
+40mm
+2.3 connection
+Connecttheexternalpowerandsignalwirestothesensor'sbuilt-inwiringharnessandleadthem
+intotheceilingopening.
+3. Product installation
+3.1 Installation Method 1: Embedded Installation
+1. Selectasuitableinstallationlocationontheceilingbasedontherangeandshapeofthearea
+tobedetected,ensuringthatthedetectionareacanbeeffectivelycovered.
+2. Theedgediameteroftheequipmentis50mm,andtheembeddedpartis40*35mm(cylindrical).A
+circularholewithadiameterof40-42mmcanbeopenedontheceiling,andtheminimumreserved
+spaceatthetopisnotlessthan50mm.
+3. Clampthepowerandsignalwiresontothedevice(gentlyclampthewires,otherwisethewires
+arepronetobreakage)andintroducethemintotheceilingopening.
+4. Insertthedeviceintotheceilingholetocompletetheinstallation.
+
+===== PAGE 12 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+12
+installation
+diagram
+===== PAGE 13 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+11
+3.2 Installation Method 2: Bracket Installation
+1. Selectasuitableinstallationlocationonthewallbasedontherangeandshapeoftheareato
+bedetected,ensuringthatthedetectionareacanbeeffectivelycovered.
+2. Fixthesensoronthemountingbracket,andaccordingtotheinstallationangleofthesensor,
+makewireharnessholesandbracketfixingholesonthewall.Thewireharnessholesare
+circularholeswithadiameterof8mm.
+3. Thefixedholediameteroftheequipmentinstallationbracketis5mm,andacircularholewitha
+diameterof5mmcanbeopenedonthewall.Thebracketisfixedwithmatchingexpansion
+screws,andtheminimumreservedspaceatthetopisnotlessthan50mm.
+4. Insertthepowerandsignalwiresintothebracketopeningsandclipthemontothereservedwiringharnessofthe
+equipment(gentlyclipthewires,otherwisethewiresarepronetobreakage),
+Installation
+dimension
+identification
+diagram
+4. Product usage
+4.1 Output signal connected to user system
+ConnectthedrycontactoutputsS1andS2terminalsofthesensortotheusersystem; Choosethe
+appropriateaccessplanbasedonthespecificsituation:
+(1)Fourwirefullyisolatedaccessmethod:
+S1andS2terminalshavenoelectricalconnectionwiththesensor. Whenthepresenceofahumanbodyis
+detected,theS1andS2terminalsareconnected; Otherwise,theS1andS2terminalswillbedisconnected;
+4.2 Sensor power supply
+ProvideaDCpowersupplyof9-28Vforthesensor; DCpowersupplycanbecentrallypoweredby
+Complete
+installation.
+Installation
+diagram
+Bracketfixinghole,directly
+5mm
+Theproductcomeswitha
+built-inwiringharness,
+whichcanbeuseddirectly
+Thewiringharnessholes
+onthebracketarestraight
+Connectedto8mm
+===== PAGE 14 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+12
+switchmodepowersupplyorseparatelypoweredbypoweradapter.
+===== PAGE 15 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+13
+Tip:Refertothe"RemoteControlSettingParameters"sectioninChapter7
+4.3 Configure parameters using remote control
+Use a remote control to configure the parameters of the MTD062-MB/MTD262-MB sensor for 
+easy on-site installation, debugging, and maintenance management.
+(1) Configureparametersfor"detectiondistance","sensitivity","delaytime",and"lightintensity";
+4.4 Recommended parameter configuration for different scenarios
+scene Scenario
+requiremen
+ts
+Installation
+requirements
+Parameterconfiguration
+suggestions
+remarks
+Entrance/hal
+lway
+changing
+room
+Micro
+motion
+detection
+motion
+detection
+1.RegionalCenter
+1.Sensitivity:1~9;
+2. Detectiondistance:
+(1) Familyfoyer2.5-3.5m;
+(2) Publicareasrangingfrom
+3.5to9meters;
+3. Someonehasadelayofmore
+than20secondswhenthereisno
+onepresent.
+1.Under normal circumstances, personnel in
+the entrance hall, hallway, and changing room
+stay for a relatively short period of time and
+haveanoticeablerangeofmovement.Inactual
+scenarios, only movement triggers are needed
+to meet the needs. For special needs such as
+staying for a long time or havingconversation
+scenes in public areas, increasing sensitivity
+and extending the "someone to no one delay"
+canbesufficient.
+kitchen Respiratory detection,
+micro
+motion
+detection,
+motion
+detection
+1.Kitchen:Inthecenter
+of the kitchen, away
+from exhaust fans,
+glass doors and
+windows,etc
+1.Sensitivity:6-9;
+2. Detectionrangeof2.5-4m;
+3. Thereisadelayofmorethan30
+secondswhenthereisnoone
+present.
+1.Therearerelativelyfewscenesinthe
+kitchenwherepersonnelare completely
+stationary,andthedelaytimefor"someone
+tonoone"canbeset slightlyshorter
+Home
+bathroom
+toilet
+Respiratory
+detection,
+micro
+motion
+detection,
+motion
+detection
+1.Bathroom and toilet:
+stay away from doors
+and windows, and
+away from exhaust
+fans; Toilet/squat top
+front 0.4-0.6m,
+comprehensive
+evaluation.
+1.Sensitivity:7-9;
+2. Detectionrangeof2.5-3.5m;
+3. Someonehasadelayofmore
+than60secondswhenthereisno
+onepresent.
+1.Thistypeofscenegenerallyhasasmallarea,
+andpersonnelmaybeinastationarystatefora
+longtime.Itisnecessarytoachieverespiratory
+detection, set high sensitivity, and pay special
+attention to the glass door when setting the
+detectiondistance.
+Living
+room,
+dining
+room,
+conference
+room
+Respiratory
+detection,
+micro
+motion
+detection,
+motion
+detection
+1. Livingroom:infrontof
+thesofa
+Position0.5-1m
+2.Restaurant:Central
+positionofdiningtable
+3.Meetingroom:on
+thecentralaxisofthe
+longsideofthe
+conferencetable
+1.Sensitivity:7-9;
+2. Detectiondistanceof4-9m;
+3. Someonehasadelayofmore
+than60secondswhenthereisno
+onepresent.
+1.Thelivingroomandconferenceroomsceneshave
+relativelylargearea,andtherearesituationswhere
+peoplesitorliecompletelystill.Therefore,sensitivity
+anddistanceneedtobesetathighvalues.
+2.The restaurant scene varies in size, but in
+reality,itoverlapswiththelivingroomoropen
+kitchen,anda suitable distanceneedstobe set
+toachieveabetterexperience.
+===== PAGE 16 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+14
+Bedroom
+Study
+Respiratory
+detection,
+micro
+motion
+detection,
+motion
+detection
+1.Bedroom:withinthe
+bedarea
+2.StudyRoom:Infront
+ofandbehindthe
+desk
+Within0.6-1.5m
+1. Sensitivity:8-9;
+2. Detectionrange5.5-9m;
+3. Someonehasadelayofmore
+than180secondswhenthereisno
+onepresent.
+1.In the bedroom scenario, users spend most
+of their time sleeping, reading, and resting,
+with less exercise; The requirements for
+respiratory detection are relatively high, and
+such scenarios require high sensitivity and a
+long delay from manned to unmanned in
+ordertopreventsensorfalsealarms.
+2.Inthestudysetting:Peopleareinastationary
+or micro motion state for a long time, such as
+reading or working, and they also need to
+detect their breath to determine their presence.
+High sensitivity is required, and the distance
+setting is based on the actual scene area and
+potentialinterferencesources.
+Pleaserefertothetableaboveforsceneparametersettings,otherwisetheoptimalsensorperformancewill
+notbeachieved!
+===== PAGE 17 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+15
+4.5 Installation principles
+(1) Entrance/hallway,dressingroomscene:centeredandsecurelyfixed.
+(2) Kitchen scene: centered and securely fixed. If the installation area is rectangular and there is a
+glass door on the long side, and the installation position in the center is directly opposite to the
+glass doorposition, thepositionneeds tobere selected. Atthis time, thesensorcanbeinstalled
+onthesolidwalledgeofthedooropeningsidetosolvetheproblemofdoorpenetration.Setting
+theappropriatedistancedoesnotaffecttheexperience.
+(3) Home bathroomandtoiletscenes:awayfrom doors and windows, away fromexhaustfans; The
+frontofthetoilet/squattingpositionshouldbe0.4-0.6m,takingintoaccountthedetectiondistance
+set tocovertheentirescene space; Microwave signals canpenetrateglass orwoodendoors, and
+the problem of door penetration can be solved by installing sensors on the solid wall side of the
+dooropening.Actualpositioningrequirescomprehensiveon-siteevaluation.
+(4) Living room/dining room/conference room scene: Living room: 0.5-1m in front of the sofa;
+Restaurant:located at the centerof the dining table; Conference Room: On the central axis of the
+longsideoftheconferencetable.
+(5) Bedroomand studyscene: Bedroom: the area directly above the bed; Study: Within0.6-1.5minfront
+andbehindthedesk.
+(6) Othertypesofscenarios
+Narrowandirregularareascenes:Thelongsideofnarrowandirregularareas(withalength
+oflessthan10m)canbeinstalledinthecenterwithsolidwallsonbothsides; Ifoneofthelongsides
+isaglasspartitionorgypsumboardpartition,andthelongsideislessthan1.3timestheshortside,you
+canchoose
+Choosea solidwalltomeasure thecenterpointforinstallation. Ifitis greaterthan1.3times,install2
+sensors in sections to cover the center; If both sides are glass partitions or gypsum board partitions,
+two sensors need to be centered and covered; The long and remote areas of narrow and elongated
+regions are largerthanthe coveragearea ofsensors, and itis necessaryto dividetheareas andfollow
+theaboveprinciples.
+Glassandgypsumboardpartitions:Keepawayfromglassandpartitions,andinsuch
+scenarios,trytomeasureasclosetosolidwallsaspossiblewhileensuringthatthesensorcancover
+thebreathingareathatneedstobecovered. Ifthesurroundingareaissurroundedbyglassand
+partitionsinstalledinthecenter,andappropriatedetectiondistance,retractiondistance,andtrigger
+sensitivityaresettosolvetheproblemofdetectionoutsidetheglassandwalls.
+Sitting,squatting,andstandingstill:Thesensorismountedonthetopofthehead,0.4-
+0.8minfrontofthehead. Itisnotadvisabletodirectlyinstallitonthetopofthehead.
+Intensivedeploymentscenario:Duringintensivedeployment,thedistancebetweensensorsin
+straightlinesshouldnotbelessthan2m.
+o
+n
+t
+w
+th
+re
+fo
+ur
+===== PAGE 18 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+16
+4.6 Common sources of interference and solutions
+(1) Fan:Shakingfan(bladediametergreaterthan10cm),metalbladefanwithoutshaking,ceilingfan.
+A fan with blades larger than 10cm that shakes its head can continuously output a manned state
+fromthesensorthattriggersthemannedstatewithintherespiratorydetectionrange; Ametalfanblade
+thatdoes notshakeits headwilltriggerormaintainthesensor's mannedstateoutputduringoperation;
+Plastic fan blades that do not shake their heads can be filtered by sensors in areas outside of breath
+detection. Settingappropriatetriggersensitivitycaneffectivelyavoidinterferencefromtriggeringsensor
+outputs.
+(2) Air conditioning: air deflectors for hanging and cabinet units, metal ornaments for air
+conditioning blowing, thick curtains for air conditioning blowing, suspended ceiling vibrations
+driven by ceiling mounted air conditioning, and louver vibrations for central air conditioning
+blowing.
+===== PAGE 19 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+17
+Thewindswingandlouvervibrationoftheairconditionercantriggerormaintainthesensorin
+a manned state within the sensor's breathing coverage range; The large amplitude of the green
+plants blown by the air conditioner can also trigger or maintain the sensor's manned state. Setting
+appropriate trigger sensitivity and trigger indentation can avoid most false triggers; But it cannot
+completely solve the problem of interference causing the sensor to continuously output a human
+statusafterthepersonleaves.
+(3) Curtains:curtainsthatswaysignificantly,rollerblindswithaluminumalloylowerrails.
+Curtains made of fabric, cotton, or sand that swing slightly in ordinary households are not
+easily triggered by sensors; If the roller blind with aluminum alloy lower rail swings within the
+detectiondistancerange,itiseasytotriggerthesensor. Bysettinganappropriatedetectiondistance
+and filtering out such interference, it is possible to effectively avoid false triggering caused by the
+abovescenarios.
+(4) Exhaust fan: Ceiling vibration caused by metal fan blades and exhaust fans. If the front of the
+sensor does not have a diameter and the fan blade sensor cannot be triggered, the suspended
+ceiling vibration caused by the exhaust fan will drive the sensor to vibrate or the vibrating
+surfacedetectedbythesensorwillbetriggered.
+Avoidexhaustfansorvibratingsurfaceswithinthedetectionrangeofsensors; Fixtheexhaust
+fanproperlytoavoidcausingvibrationintheceiling.
+(5) Strong 5.8GHz WiFi signal interference: There is a 5.8GHz WiFi router/AP within 3m of the
+front area of the sensor; There is a 5.8GHz WiFi router/AP located within 1.5m horizontally or
+onthebackofthesensor.
+SuggestinstallingWiFiroutersinthefrontareaofthesensoratadistanceofatleast3mfromthe
+sensor; Routers in other directions should be installed at a distance of at least 1.5m from the sensor;
+WhenusingatopmountedAP,maintainadistanceofatleast1.5mbetweentheAPandthesensor.
+(6) Airflow (wind): The movement, drifting, vibration, etc. of objects in the scene caused by blowing
+maytrigger.
+Settingappropriatetriggersensitivitycanfilterwindandgrassmovementsbelow2-3levels,andthe
+higherthewindlevel,themorelikelyitistotriggerincorrectly.
+(7) Animals:cats,dogs,mice,otherpets,etc. Thedifferencebetweenotheranimalspeciesand
+humancharacteristicsliesintheirbodysize,suchasthetriggeringmechanismbeingthesame
+asthatofhumans.
+Setappropriatetriggersensitivityandtriggerindentationdistance,mostcats,dogs,andmicecannot
+triggerthesensor. Thesensorcanalsobetriggeredbythesignificantswingingofcurtainscausedbycats
+anddogs,orthedraggingofclothes,bedsheets,duvetcovers,andthemovementofobjects.
+(8) Lowfrequencyvibration:wallorceilingvibrationcausedbyloudsound,vibrationcausedby
+decorationupstairsanddownstairs,etc.
+Wheninstalling,itisnecessarytomaintainasuitabledistancefromtheaudiosystemtoavoid
+===== PAGE 20 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+18
+radarsignalsdirectlyshiningonthemainaudiosystem.Whenselectingtheinstallationposition,
+themainconsiderationistocoverareaswherepeoplearestationary,suchassofas,seats,etc. Set
+relativelylowsensitivity(toavoidfalsetriggering)andlonger'mannedtounmanneddelay'to
+achievemorereliabledetection.
+===== PAGE 21 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+19
+The MTD062-MB/MTD262-MB sensor is a high-performance sensor that can detect subtle 
+changes that are not visible to the human eye. If you encounter performance that deviates from 
+expectations during testing, please contact us for detailed technical support to avoid parameter 
+settings errors that may affect usage and prevent the sensor from performing at its best.
+The default configuration parameters of the MTD062-MB/MTD262-MB sensor may not be 
+suitable for all users' actual scenarios. Please be sure to reconfigure the sensor
+5. Common problems and solutions
+common
+problem
+Causeanalysis resolvent
+Afterconnecting
+thepower
+supply,the
+sensorindicator
+light
+Noresponse
+1.Isthepowersupplynormalandmeetsthe
+workingvoltageofthesensor?
+Checkifthepowersupplymeetstheworking
+voltageofthesensor
+2.Istheindicatorlightdamaged? Contactafter-salespersonnelandreturntothe
+factoryforrepair
+In the presence of
+someone, the sensor
+cannot detect their
+presence
+Isthedetectionareasettoosmall? Resetthematchingdetectionareabasedonthe
+scenario
+Isthesensitivitysettingtoosmall? Adjustthecorrespondingsensitivityaccordingto
+thescene
+3.Isthesensorinstalledproperly? Ensurethatthesensorisinstalledproperlyand
+unobstructed
+4.Isthedelaytimesettooshort? Ensureadelaytimeof30secondsormore
+Inanunmanned
+state,thesensor
+detectsthe
+presenceof
+someone
+Isthereanyinterferencesourceinthe
+environment?
+Eliminateinterferencesourcesintheenvironment
+Isthedetectionareatoolarge? Resetthematchingdetectionareabasedonthe
+scenario
+Isthesensitivitysettingtoohigh? Adjustthecorrespondingsensitivityaccordingto
+thescene
+6. Special instructions for sensors
+Duetothecharacteristicsofmicrowavetechnology,idealdetectionresultsmaynotoccurincertain
+applicationscenariosormayonlybeobtainedundersuitableconditions.
+1. Detectiontechnology:respiratorylevelweakmotiondetectiontechnology:
+(1) Thecurrent version of thesensor can detect targets withfluctuations as lowas 1mm orspeeds as lowas
+3 mm/s, while most human respiratory movements and body micro movements have fluctuations far
+greater than 1 mm or speeds greater than 3mm/s,making it highlysensitiveto identify thepresenceofa
+humanbody;
+===== PAGE 22 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+20
+(2) Fromausageperspective,itcanbeunderstoodasamotiondetectionwithhighersensitivitybutlowerfalse
+alarmrate,andcanstablyandreliablydetectweakfluctuationssuchasbreathing.
+===== PAGE 23 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+16
+2. Limitationsof"WeakMotionDetectionTechnology":
+(1) Trembling air conditioners, fans, washing machines; Shaking curtains and green plants; Shaking
+large metal equipment, ventilation ducts, fire pipes, and drainage pipes; If the motion frequency or
+harmonic frequency of objectssuch as vibrations thatare not visible to the human eye fall within the
+rangeofhumanrespiratoryfrequency,theymaybeobservedbysensorsandmistakenforthepresence
+ofahumanbody;
+(2) Toeliminate interferencefromshakingorshakingobjects,thefarthestdetectiondistancecanbesetto
+excludeinterferingobjectsfromthedetectionarea; Itisalsopossibletoadjusttheinstallationposition
+sothatthebeamcannotdirectlyorindirectlyilluminatetheinterferingobjectaftermultiplereflections.
+Alternatively, when there are fixed sources of interference that cannot be resolved by the universal
+version sensor, customized interference algorithms can be used to filter out interfering substances
+(suchaselectricfans,airconditioners,bathroomheaters,etc.).
+3. Needforrelativemotion:
+(1) Due to the highest sensitivity, farthest detection distance, and easier detection of targets in radial
+motion (relative motion) by sensors. Therefore, the best installation method is: horizontal
+installation>inclined downward installation>top installation; However, when using the detection
+function, it is recommended to install it on top, as there may be certain detection blind spots when
+installedhorizontallyordiagonallydownwards.
+(2) The best relative motion during top installation is upward and downward movement; Secondly, there are
+motioncomponentsintheupanddowndirections;
+(3) Whenmountedontop, thebeamis obliquelydirectedtowardsthe bodyata certain distance fromthe
+sensor.The horizontalmovementofthe bodywillhave somemotioncomponentsinthe upanddown
+directions,soitcandetectthepresenceofaperson;
+(4) When installed on top, sit directly below the sensor without shaking your body, only breathing. As
+breathing is a horizontal movement without any vertical motion components, the sensor will not be
+abletodetectthepresenceofsomeone. Inthiscase,thedelaytimeofthesensorisgenerallyextended,
+so that the probability of the human body not moving at all directly below the sensor during a longer
+observation time becomes smaller, and the probability of detecting the presence of the human body
+willincrease,reducingthefalsealarmrate;
+(5) Wheninstalledhorizontally:onlyshiningonthefeet,itwillnotdetectthepresenceofpeople.
+4. Sensorangle
+(1) Electromagneticwavesarelikeabeamofflashlightlight,withenergybeyondtheedge.Althoughthere
+is light near the edge, itisrelatively weak. Fora sensor with a 120 × 120 ° angle, 120 ° represents the
+antenna radiation angle, which is the angle measured when the signal energy decays by 6 dB (0.25
+times)relative to the front directionat0 °. Itisnotthedetectionanglethatcandetectthe target,and
+the centralcross-sectionofthe detectionarea is notlike a triangular detection surface with anopening
+of120 °.
+(2) Thesizeanddistanceofthedetectionareaarerelatedtothevolume,relativeangle,andmotionspeedof
+the detected target. For horizontal installation: the larger the target volume, the easier it is to detect;
+Thesmallertherelativeangle(suchasforwardrelativemotion),theeasieritistodetect.
+5. Signalenhancement:
+Duetothemultipathpropagationeffectofmicrowavesignals,inaclosedandobstructedenvironment,
+===== PAGE 24 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+17
+the reflected signal will be enhanced, thereby improving the detection performance of the sensor. If the
+sameconfigurationparametersareset,thedetectioneffectwillbebetterinasmallbathroomthaninalarge
+conferenceroom; Smallroomshavebetterdetectioneffectsthanhalls,andsoon.
+===== PAGE 25 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+18
+7. Remote control setting parameters
+Thedrycontactversionofthesensoralsosupportsremotecontrolconfigurationparameters,making
+itconvenientfordistributionnetwork,on-siteinstallation,debugging,andmaintenancemanagement
+7.1 Remote Control Instructions
+7.2 Additional explanation of function keys
+(1) 【
+ 】 Key:Longpresstounlock/locktheremotecontrol;
+Longpresstounlock/lockremotecontrol:Thesensordefaultstothe"unlocked"stateatthe
+factory,anduserscandirectlyusetheremotecontrol
+Deviceoperation. Duringnormaluse,ifthesensorencountersremotecontrolinterference
+fromotherappliances,longpresstolockthesensorandprohibitremotecontroloperation.
+(2) 【
+ 】 Key: Long press to restore factory settings; Short press reset
+Longpresstorestorefactorysettings:Restoresensorparameterstodefaultstate:
+sensitivity7,detectiondistance6meters,delaytime15seconds,etc.
+Shortpressreset:usedtorestartthecontroller(MCU). Password123isrequired,otherwise
+restartingwillbeinvalid.
+(3) 【
+ 】 key:Shortpresstosetthelightingthreshold;Longpresstosettheentrancedistanceto
+beindented.
+Shortpresstosetthelightingthreshold:Whenthedeviceisrunninginlocalmode
+(automatic),itcanbecombinedwiththelightingthresholdto
+Auto-Control. Whentheactuallightingvalueislowerthanthesetthresholdandsomeoneis
+detected,thedevicecircuitbreakerwillconduct(outputnormallyopen); Ifnooneisdetected,
+thedevicecircuitbreakerwilldisconnect(outputnormallyopen). Theconfigurablelight
+sensitivityrangeis0~255.00Lux.
+Longpresstosettheentrancedistanceindentation:Basedonthedetectiondistance,the
+distanceisindentedinward. Mainlytoavoidfalsetriggeringcausedbydistanceedge
+o
+n
+t
+w
+o
+n
+t
+w
+
+===== PAGE 26 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+19
+interference. Ifthedetectiondistanceis5metersandtheindentationis0.5meters,thenthe
+initialtriggeringdistanceis
+4.5meters),withavaluerangeof0-10.00m(defaultvalueof0.6meters).
+===== PAGE 27 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+20
+(4) 【
+ 】 key:Shortpresstosetsensitivity;Longpresstosettheentrysensitivity.
+Shortpresstosetsensitivity:thedetectionthresholdforthestrengthofobjectenergy
+whenthedeviceisworking. Thehigherthesensitivity,theweakerthedetectionenergy
+intensity,andthelowerthesensitivity,thestrongerthedetectionenergyintensity. Thevalue
+rangeis1-9(default7).
+Longpresstosettheentrancesensitivity:thesensitivitythresholdtriggeredforthefirst
+timewhenthetargetentersthedetectionrange,mainlyusedtofilteroutfalsetouch
+interference. Thevaluerangeis1-7(default5).
+(5) 【
+ 】 key: Short press to set departure delay; Long press to set the entry
+filtering time; Short press to set detection lock time in debugging mode
+Shortpresstosetdeparturedelay:usedtoconfiguretheconfirmationtimeafterthe"target
+disappears". Thelargertheparameterconfiguration,themoreaccommodatingitis
+Easytoreducemissedreportscausedbyaccidentaldisappearanceoftargets; Butifthetimeis
+toolong,thedeviceneedsmoretimetoreportthatthetargethasdisappeared. Thedefault
+valueis30seconds,witharangeof0to64800seconds.
+Longpresstosettheentryfilteringtime:usedforthetargetconfirmationtimeafter
+detectingthetarget. Thedefaultvalueis0.05seconds,
+take
+Thevaluerangeis0-0.5seconds.
+(6) 【
+ 】 key: Short press to confirm the parameter takes effect;
+Shortpresstoconfirmtheparametertakeseffect:
+ Afterpressingthe 【
+ 】,【
+ 】,【
+】,【】 keysontheremotecontrol,
+entertheparametervalue,andfinallyshortpressthe 【
+ 】 keyforthesensortostoreand
+usethenewparametervalue.Otherwise,itwillnotbeused.
+(7) 【
+ 】 key:Shortpresstosetdetectiondistance;Longpresstosetthedetectionshielding
+distance
+Shortpresstosetdetectiondistance:thefarthestdistancedetectedbythedeviceduring
+operation. Theconfigurablevaluerangeis1.2-10m,validtotwodecimalplaces. Excess
+decimalpointsanddecimalvalueswillbeignoredbythesensor.
+Longpresstosetthedetectionshieldingdistance:theclosestdistancedetectedbythe
+deviceduringoperation. Thevaluerangeis0.3~9m(itsvaluemustbelessthanthe
+"detectiondistance",defaultis6meters).
+(8) 【 】 key:Shortpresstoenterdecimalpoint;
+Shortpresstoenterdecimalpoint:Enterthedecimalpoint.
+o
+n
+t
+w
+o
+n
+t
+w
+o
+n
+o
+n
+t
+w
+o
+n
+===== PAGE 28 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+21
+(9) [Number]key:Numberkey
+Numberkeys:Shortpresstoenternumbers1-9
+(10)【 0 】 key:Shortpresstoenterthenumber"0"; Longpressthe
+switchLEDindicatorlightandshortpresstoinputthenumber
+"0":
+LongpresstheswitchLEDindicatorlight:ThedefaultLEDindicatorlightisoff,whichmeans
+itgoesoutwhenworkingnormallyandflashesorlightsupwhenabnormal. Pressandholdthebuttonto
+turn onthe indicator light (which willstill flash whenremotelycontrolled). Ifsomeone is detected, the
+indicatorlightwillremainon. Pressandholdagaintoturnoffthefunctionoftheindicatorlightdetecting
+thatthepersonisconstantlyon.
+o
+n
+o
+n
+t
+w
+===== PAGE 29 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+22
+Tips:
+(1) Afterpressingthe 【】, 【】, 【】 or 【】 buttons,ifthereisnooperationwithin5seconds,thesensorwilltimeoutandexitthe
+configurationstate;
+(2) 【】, 【 Number 】,and 【 0 】 arenumericcombinationkeysusedforparametervalueinput.
+Tips:
+(1) After pressingthe 【】 button,thesensorwillrestart.Afterabout3seconds,thesensorwillexecutenewparametersand
+restartdetection;
+After seconds, the indicator light of the sensor starts displaying parameters. For example,
+if the current detection distance is 7m, the blue indicator light of the sensor will flash 7
+times every 1 second, and then flash 1 time, indicating 0. So the reading is 70, and the
+resolution of the detection distance is 0.1, so the reading is 70 * 0.1=7 meters. For
+example, if the current detection distance is 6.5m, the blue indicator light of the sensor
+will flash 6 times every 1 second, and then after an interval of 2 seconds, the blue
+indicator light will flash 5 times every 1 second, indicating 5. So the reading is 65, and
+7.3 Example
+(1)Setsensitivityto8:
+Operationsteps:Intheunlockedstateoftheremotecontrol,firstpressthe 【
+ 】 keybriefly
+toentertheconfigurationstate,thenpressthenumber"8"briefly,andfinallypressthe 【
+ 】
+keybrieflytotakeeffect.
+(2)Ifthemaximumdetectiondistanceissetto6.5meters:
+Operationsteps:Intheunlockedstateoftheremotecontrol,firstpressthe 【
+ 】 key
+brieflytoentertheconfigurationstate,thenpressthenumber"6",pressthe 【 】 key
+briefly,pressthenumber"5"briefly,andfinallypressthe 【
+ 】 keybrieflytotakeeffect.
+(3)Restorefactoryconfiguration:
+Pressandholdthe 【
+ 】 key for at least 2 seconds whiletheremotecontrolis
+unlocked.
+7.4 Parameter query
+Thedrycontactversionoftheproducthasthefunctionofparameterquery
+7.4.1 Parameterquerysteps
+u Tocheckthedetectiondistance,pressthe 【 】 buttonontheremotecontrolbriefly,
+thenpressthe 【
+ 】buttonbriefly,andwaitfor2seconds
+u Stepstochecksensitivity:Shortpressthe 【】 ontheremotecontrol,thenshortpress
+【
+ 】,waitfor2seconds,andthesensorindicatorlightwillstartdisplayingparameters.Forexample,ifthecurrentsensitivityis7,theblueindicatorlightofthesensorwillflash7timesevery1second,indicating7.Theresolutionofsensitivityis1,sowhenreadout,thesensitivityis7*1=7.Forexample,ifthecurrentsensitivityis5m,theblueindicatorlightofthesensorwillflash5timesevery1second,indicating5.Theresolutionofsensitivityis1,sowhenreadout,thedetectiondistanceis5*1=5.
+th
+re
+
+===== PAGE 30 =====
+MTD062-MB/MTD262-MB
+Zhejiang Oujue Electronic Technology Co., Ltd.User Manual (V1.6)
+23
+Tips:
+Theresolutionfordetectingdistanceis0.1
+Theresolutionofdelaytime,sensitivity,andlightsensitivitythresholdis1
+u Operationsteps
+ for queryingdelay time:Shortpress the 【 】 on the remote
+control, then short press 【 】, wait for 2 seconds, and the sensor
+indicator light will start displaying parameters. For example, if the
+current delay time is 30 seconds, the blue indicator light of the sensor
+will flash 3 times every 1 second, indicating 3, and then flash 1 time,
+indicating 0. Therefore, the read value is 30, and the sensitivity
+resolution is 1. Therefore, the read value is 30 * 1=30. For example, if
+the current delay time is 25 seconds, the blue indicator light of the
+sensor will flash twice every 1 second, indicating 2. Then, after an
+interval of 2 seconds, the blue indicator light will flash five times every
+1 second, indicating 5. Therefore, the read value is 25, and the
+sensitivity resolution is 1. Therefore, the read value is 25 * 1=25.
+u Steps for querying the
+ light sensing threshold: Short press the 【 】 on the remote
+control, then short press 【】, wait for 2 seconds, and the sensor indicator light will start
+displaying parameters. Forexample, ifthecurrentlightsensingthresholdis 10Lux, theblue
+indicator light of the sensor will flash once, indicating 1, and then flash once, indicating 0.
+Therefore,thereadvalueis10. Theresolutionofthelightsensingthresholdis1,sotheread
+valueis10*1=10Lux.Forexample,ifthecurrentlightsensingthresholdis15Lux,theblue
+indicatorlightofthesensorwillflashonce,indicating1.Then,afteranintervalof2seconds,
+the blue indicator light will flash 5 times every 1 second, indicating 5. Therefore, the read
+valueis15.Theresolutionofthelightsensingthresholdis1,sothereadvalueis15Lux.

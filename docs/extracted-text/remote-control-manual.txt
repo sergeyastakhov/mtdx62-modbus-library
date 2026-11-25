@@ -1,0 +1,230 @@
+
+===== PAGE 1 =====
+                                                         
+                                                
+1 
+遥控器使用说明V1.0 
+1． 遥控器说明 Remote control instructions 
+ 
+2． 功能键补充说明   Function key supplementary instructions 
+(1) 【   】键：长按解锁/锁定遥控器；短按调试模式开/关控制 
+  [   ]Key: long press to unlock / lock the remote control; short press to debug mode on / off 
+control 
+① 长按解锁/锁定遥控器：传感器出厂默认为“解锁”状态，用户可直接使用遥控 
+器操作。传感器在正常使用过程中，如遇到其他电器的遥控器干扰，可长按锁定传感
+器，禁止遥控器操作。 
+ Long press to unlock / lock remote control: the default sensor is "unlock" state, the user can 
+directly use the remote control 
+Device operation. During the normal use of the sensor, if the remote control interference of 
+other electrical appliances is encountered, you can long press to lock the sensor and prohibit 
+the remote control operation. 
+② 短按调试模式开/关控制：设备处于本地强制开关控制时，远程平台禁止设置参 
+数，如设备处于本地（自动）运行模式，则停止该模式，直到本地上电周期内维持该
+模式。支持“开”、“关”。 
+Short press debugging mode on / off control: When the device is under local forced switch 
+control, the remote platform forbids setting parameters 
+
+===== PAGE 2 =====
+                                                         
+                                                
+2 
+遥控器使用说明V1.0 
+Number, if the device is in local (automatic) operation mode, stop the mode until maintained 
+during the local power cycle. Support "open", "close". 
+(2) 【      】键：长按恢复出厂设置；短按复位 
+ [        ] Key: Long press to restore the factory settings; short press to reset 
+① 长按恢复出厂设置：将传感器参数恢复到默认状态：灵敏度 7、检测距离 6 米、 
+延时时间 15 秒等。 
+ Long press to restore factory setting: restore sensor parameters to default state: sensitivity 
+7, detection distance of 6 m，delay time of 15 seconds, etc. 
+② 短按复位：用于重启控制器（MCU）。需要输入密码 123，否则重启无效。 
+Short pressing reset: used to restart the controller (MCU). Password 123 is required, 
+otherwise the restart is invalid. 
+(3) 【   】键：短按设置波特率 
+    [     ] Key: Short press to set the port rate  
+① 默认波特率 9600bsp，如需另配置波特率，可通过此键进行配置。配置范围 
+1200bps~115200bps。 
+The default port rate is 9600 bsp, which can be configured by this key. Configuration range 
+1200bps~115200bps。 
+(4) 【 ID 】键：短按设置 ID 
+① 用于修改 485 版本设备的总线地址，默认 ID 为 1，产品如需另配置 ID 地址，可 
+通过次此键进行配置。配置范围 1~247，一条总线上建议设备不超过 120 个。 
+Use to modify the bus address of the 485 version device, the default ID is 1, if the product 
+needs to configure another ID address, can 
+Configure it with this second key. Allocation range 1~247, recommend no more than 120 
+devices on one bus. 
+(5) 【   】键：短按设置光照阀值；长按设置入场距离缩进。 
+ [     ] Key: short press to set lighting threshold; long press to set entry distance. 
+① 短按设置光照阀值：设备处于本地模式（自动）运行时，能够结合光照阈值进行 
+自动控制。当实际光照值低于设置阈值时，检测到有人，则设备断路器导通（输出常
+开）；检测到无人，则设备断路器断开（输出常开）。可配置的光感值范围为 0~255.00Lux。 
+Set the illumination threshold: When the device is running in local mode (automatic), it can 
+
+===== PAGE 3 =====
+                                                         
+                                                
+3 
+遥控器使用说明V1.0 
+combine the illumination threshold 
+automata. When the actual illumination value is below the set threshold, if the human is 
+detected, the circuit breaker is on (the output is normally open); if the unmanned is detected, 
+the circuit breaker is disconnected (the output is normally open). The configurable light 
+sensitivity range is 0~255.00Lux. 
+② 长按设置入场距离缩进：在探测距离的基础上，进行往内缩进的距离。主要避免 
+因距离边沿干扰导致的误触发。（例探测距离 5 米，缩进 0.5 米，则初次触发距离为
+4.5 米），取值范围 0~10.00m（默认值 0.6 米）。 
+Long press set admission distance indent: on the basis of detection distance, the indent 
+distance. Mainly avoid 
+Misfiring due to interference from the distance edge.(For example, the detection range is 5 
+meters, the shrinkage is 0.5 meters, then the initial trigger distance is 4.5 meters), and the 
+value range is 0~10.00m (the default value is 0.6 meters). 
+(6) 【   】键：短按设置灵敏度；长按设置入场灵敏度。 
+   [    ] Key: Short press to set sensitivity; long press to set entry sensitivity. 
+① 短按设置灵敏度：设备工作时，对物体能量强弱的探测阈值。灵敏度越高，探测 
+能量强度越弱，灵敏度越低，探测能量强度越强。取值范围 1~9（默认 7）。 
+Short press set sensitivity: the detection threshold of the energy strength of the object when 
+the equipment is working. The higher the sensitivity, the detection 
+The weaker the energy intensity, the lower the sensitivity, and the stronger the detection 
+energy intensity. Value range is from 1 to 9 (default 7). 
+② 长按设置入场灵敏度：目标进入探测范围内，首次触发的灵敏度阈值，主要用于 
+过滤误触干扰。取值范围 1~7（默认 5）。 
+ Long press to set the entry sensitivity: the target into the detection range, the first triggered 
+the sensitivity threshold, mainly used for 
+Filter the mistouch interference. Value range is from 1 to 7 (default 5). 
+(7) 【   】键：短按设置离场延时；长按设置入场过滤时间；在调试模式下短按设置检
+测封锁时间 
+[   ] Key: short press to set departure delay; long press to set entry filtering time; short 
+press to set detection blocking time in debugging mode 
+① 短按设置离场延时：用于配置“目标消失”后的确认时间。参数配置越大，越容 
+
+===== PAGE 4 =====
+                                                         
+                                                
+4 
+遥控器使用说明V1.0 
+易减少因目标偶然消失，导致的漏报；但时间过长设备需要更长的时间报告目标已经
+消失。默认值 30 秒，取值范围 0~1500 秒。 
+Short press to set the departure delay: used to configure the confirmation time after the target 
+disappears. The larger the parameter configuration, the more tolerant 
+② 长按设置入场过滤时间：用于检测到目标后，目标确认时间。默认值 0.1 秒，取 
+值范围 0~5 秒。 
+Long press to set the entry filter time: used for the target confirmation time after detecting 
+the target. The default value is 0.1 seconds, take values range from 0 to 5 seconds. 
+③ 调试模式下短按设置检测封锁时间：模块检测到目标后，默认封锁检测功能 x 
+秒钟，同时 OUT 引脚输出控制信号。控制信号持续时间到之后，再默认封锁检测功
+能 x 秒钟，才允许可以再次检测目标。主要解决因控制外部设备引起的电源纹波、辐
+射产生等情况对设备的干扰。默认值 2.5 秒（继电器版本，非继电器版本默认值 1 秒），
+取值范围 0.1~60 秒。 
+In debugging mode: after the module detects the target, the default block detection function 
+x 
+Seconds, while the OUT pin outputs the control signal. After the duration of the control 
+signal reaches, the default blocking detection function for x seconds allows the target to be 
+detected again. Mainly solve the control of external equipment caused by power ripple and 
+radiation generation to the equipment. Default value is 2.5 seconds (relay version, non-relay 
+version default value is 1 second), ranging from 0.1 to 60 seconds. 
+(8) 【    】键：短按确认参数生效；长按进入配网模式 
+[    ] Key: Short press to confirm the parameter; long press to enter the distribution mode 
+① 短按确认参数生效：遥控器按下【  】、【  】、【  】、【  】键之后，再输
+入参数 
+值，最后需要短按【   】键，传感器才会存储并使用新的参数值，否则不会使用。 
+Short press to confirm the parameter: enter the parameters after pressing [   ], [   ], [   ] 
+and [   ] 
+Value, the sensor will store and use the new parameter value, otherwise it will not be used. 
+② 长按进入配网模式：无线版本产品长按此键进入网络配置模式。 
+Long press to enter the distribution network mode: wireless version product long press this 
+key to enter the network configuration mode. 
+
+===== PAGE 5 =====
+                                                         
+                                                
+5 
+遥控器使用说明V1.0 
+(9) 【   】键：短按设置探测距离；长按设置探测屏蔽距离 
+[     ] Key: short press to set the detection distance; long press to set the detection 
+shielding distance 
+① 短按设置探测距离：设备工作时检测的最远距离。可配置的值范围为 0.3～9m， 
+小数点后两位有效。多余的小数点和小数值，将被传感器忽略。 
+Short press to set the detection distance: the longest distance detected when the equipment 
+is working. The configurable values range from 0.3 to 9 m, 
+Two decimal places are valid. Excess decimal points and decimal values, will be ignored by 
+the sensor. 
+② 长按设置探测屏蔽距离：设备工作时检测的最近距离。取值范围 1.5~10m（其 
+取值必须小于“探测距离”，默认 6 米）。 
+Long press to set the detection shielding distance: the nearest distance detected when the 
+equipment is working. The value range ranges from 1.5 to 10 m (which 
+The value must be less than "probe distance", default 6 m). 
+(10) 【   】键：短按输入小数点；长按开关蜂鸣器 
+   [   ] Key: press the decimal point; press the switch buzzer 
+① 短按输入小数点：输入小数点。 
+ Enter the decimal point short: enter the decimal point. 
+② 长按开关蜂鸣器默认：默认蜂鸣器开启，遥控器按键时，会发出声音。如需要关 
+闭蜂鸣器，长按该按键，则蜂鸣器关闭；再长按，蜂鸣器打开。 
+Long press switch buzzer default: the default buzzer is on, the remote control button, will 
+make a sound. If you need to close 
+Close the buzzer, long press the buzzer; then press long and open the buzzer.Long press 
+switch buzzer default: the default buzzer is on, the remote control button, will make a sound. 
+If you need to close 
+Close the buzzer, long press the buzzer; then press long and open the buzzer. 
+(11) 【   】键：1.长按进入调试模式；2.短按输出端口极性 
+  【   】Key: 1. Long press to enter the debugging mode; 2. Short press the output port 
+polarity 
+① 长按进入调试模式：Long press into debug mode: 
+
+===== PAGE 6 =====
+                                                         
+                                                
+6 
+遥控器使用说明V1.0 
+② 短按输出端口极性：用于设置断路器默认输出状态。默认为“常开”状态，可选 
+值“常开”、“常闭”。 
+Short press output port polarity: used to set the default output status of the circuit breaker. 
+The default is normally open the state, optional value "often open", "often closed". 
+(12) 【数字】键：数字键 [Number] Key: Number key 
+① 数字键：短按输入数字 1～9 
+Number key: Short press the input number 1~9 
+(13) 【 0 】键：短按输入数字“0”；长按开关 LED 指示灯 
+[0] Key: Short press the input number "0"; long press the switch LED indicator light 
+① 短按输入数字“0”：Short-press the input number "0": 
+② 长按开关 LED 指示灯：默认 LED 指示灯为工作正常时熄灭，异常时闪烁或点
+亮。 
+长按该按键，则关闭指示灯（遥控器遥控时仍然会闪烁），异常时不再闪烁或点亮。
+再长按，则打开指示灯。 
+Long press switch LED indicator: the default LED indicator is off when working normally 
+and flashes or lit when abnormal. 
+Long press this button, turn off the indicator light (still blink when the remote control is 
+remote control), and no longer flash or light when abnormal. Press long again, then turn on 
+the indicator light. 
+提示： 
+(1) 按下【  】、【  】、【  】或【  】按键后，如果 5s 内无操作，传感器将超时退出配置状态； 
+(2) 【  】、【数字】、【0】为数字组合键，用于参数值输入。 
+Tips: 
+(1)After pressing the [   ], [   ], [   ]] or[   ] button, if there is no operation within 5s, the sensor will time out and exit the 
+configuration state; 
+(2)  [   ], [Number], [0] are digital keys for parameter value input. 
+3． 示例 Instance   
+(1) 设置灵敏度为8： 
+Set the sensitivity to be 8: 
+操作步骤：在遥控器解锁状态，先短按【  】键进入配置状态，再短按数字“8”，最
+后短按【   】键生效。 
+Operation steps: in the remote control unlock state, first press [    ] key to enter the 
+
+===== PAGE 7 =====
+                                                         
+                                                
+7 
+遥控器使用说明V1.0 
+configuration state, then press the number "8", and finally press [      ] key to take effect. 
+(2) 如设置最远检测距离6.5米： 
+If the maximum detection distance is 6.5 meters: 
+操作步骤：在遥控器解锁状态，先短按【  】键进入配置状态，再短按数字“6”、短
+按【  】、短按数字“5”，最后短按【   】键生效。 
+Operation steps: in the remote control unlock state, first press the [     ] key to enter the 
+configuration state, then press the number "6", [  ], and the number "5", and finally press 
+the [       ] key to take effect. 
+(3) 恢复出厂配置： 
+Restore the factory configuration: 
+在遥控器解锁状态，长按【      】键2s以上。 
+In the remote control unlock state, press [       ] for 2s. 
+ 
+ 
+ 
