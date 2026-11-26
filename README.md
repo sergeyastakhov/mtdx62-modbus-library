@@ -149,17 +149,28 @@ Write is a tool, not a policy. The library deliberately does **not**:
 - change the unit's own address, baud rate or parity when those registers are written, or reconnect;
 - know that `active_report = 1` makes the device talk on its own.
 
-Three consequences worth a thought before writing:
+### What the sensor does with the value
 
-- `unit_id`, `baudrate` and `parity` describe how the device answers. Whether a new value applies
-  immediately or after a power cycle is not verified yet (see `docs/DEVICE-FACTS.md`); if it applies
-  at once, the current link stops working and the caller has to reconnect with the new settings.
-- `active_report` switches the device into push mode. On a shared bus that means frames nobody asked
-  for, so a poll-based consumer should leave it off.
-- Writing `light_threshold` and `report_interval` rests on a register map that two vendor sources
-  describe differently; the library writes exactly the documented address and never guesses.
-- The threshold is expressed in the same tenths of a lux as the reading: `10.0` is 10 lux, which
-  the device stores as 100.
+The vendor table is not the whole truth, and `docs/DEVICE-FACTS.md` records what was measured on a
+real unit:
+
+- **The sensor clamps instead of rejecting.** Detection distance below 1.0 m is stored as 1.0 m, the
+  shielding zone below 0.3 m as 0.3 m, and neither raises an error. The library therefore refuses
+  values outside the measured ranges, so you get what you asked for or a clear `ValueError`.
+- **A new value appears with a delay.** For up to half a second a read can still return the previous
+  number. The confirmation read is repeated for a second before `WriteVerificationError` is raised,
+  so a slow sensor is not mistaken for a rejected write.
+- **The zones must fit inside the detection radius:** `shielding_distance + entry_indent` must stay
+  below `detection_distance`. The sensor enforces it and answers with exception `0x02`, which reads
+  like "illegal address" rather than "illegal value". The library does not predict this; the error
+  comes from the device.
+- **`unit_id`, `baudrate` and `parity` apply at once**, not after a power cycle: the moment the write
+  lands, the device answers on the new address or speed. A caller that changes them has to move its
+  link with them, or it loses the sensor until it does.
+- **`active_report` switches the device into push mode.** On a shared bus that means frames nobody
+  asked for, so a poll-based consumer should leave it off.
+- The threshold is expressed in the same tenths of a lux as the reading: `10.0` is 10 lux, which the
+  device stores as 100; the register accepts up to 4200, that is 420 lx.
 
 ## Health codes
 

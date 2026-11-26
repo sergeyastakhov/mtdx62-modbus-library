@@ -10,7 +10,9 @@ the bus address or the baud rate changed. Those decisions belong to the caller.
 
 from __future__ import annotations
 
+import asyncio
 import math
+import time
 from dataclasses import dataclass
 from typing import Any
 
@@ -35,6 +37,12 @@ from .const import (
     TENTHS_SCALE,
 )
 from .errors import WriteVerificationError
+
+# The sensor shows the previous register value for up to half a second after a
+# write, so a confirmation read taken immediately can see the old number. Retry
+# until the value appears rather than reporting a failure that is not there.
+CONFIRM_DEADLINE = 1.0
+CONFIRM_PAUSE = 0.15
 
 
 def _digits(step: float) -> int:
@@ -97,22 +105,22 @@ _SPECS: dict[str, SettingSpec] = {
         SettingSpec(
             "detection_distance",
             HOLDING_DETECTION_DISTANCE,
-            60 * DISTANCE_SCALE,
+            100 * DISTANCE_SCALE,
             1000 * DISTANCE_SCALE,
             DISTANCE_SCALE,
             "m",
-            60,
+            100,
             1000,
             False,
         ),
         SettingSpec(
             "shielding_distance",
             HOLDING_SHIELDING_DISTANCE,
-            0.0,
+            30 * DISTANCE_SCALE,
             1000 * DISTANCE_SCALE,
             DISTANCE_SCALE,
             "m",
-            0,
+            30,
             1000,
             False,
         ),
@@ -159,11 +167,11 @@ _SPECS: dict[str, SettingSpec] = {
             "light_threshold",
             HOLDING_LIGHT_THRESHOLD,
             0.0,
-            1000 * TENTHS_SCALE,
+            4200 * TENTHS_SCALE,
             TENTHS_SCALE,
             "lx",
             0,
-            1000,
+            4200,
             False,
         ),
         SettingSpec("report_interval", HOLDING_REPORT_INTERVAL, 1, 36000, 1, "s", 1, 36000, True),
@@ -281,24 +289,35 @@ class Settings(Component):
 
         The value must be expressed in the same units the reading uses: 30 for
         ``departure_delay``, 6.0 for ``detection_distance``. Nothing is sent
-        before the value is known to be within the register map.
+        before the value is known to be within the measured range.
+
+        The sensor reports a new value with a delay of up to half a second, so
+        the confirmation read is repeated until the value appears or a second has
+        passed.
 
         Raises ``ValueError`` for a value out of range or of the wrong type,
         ``AttributeError`` for an unknown or read-only parameter, and
-        ``WriteVerificationError`` when the device stores something else.
-        Errors of the exchange come from ``modbus-connection`` unchanged.
+        ``WriteVerificationError`` when the device stores something else. Errors
+        of the exchange come from ``modbus-connection`` unchanged.
 
         What this call deliberately does not do: it does not check the device's
-        health first, does not reconfigure the unit when ``unit_id``,
-        ``baudrate`` or ``parity`` change, and does not care that ``active_report``
-        makes the device talk on its own. Those are the caller's decisions.
+        health first, and it does not reconnect when ``unit_id``, ``baudrate`` or
+        ``parity`` change — those take effect at once on the device, so the
+        caller has to move the link with them. It also does not care that
+        ``active_report`` makes the device talk on its own.
         """
         spec = _SPECS.get(name)
         if spec is None:
             raise AttributeError(f"{name!r} is not a writable setting")
         expected = spec.coerce(value)
         await self.write(name, expected)
-        await self.async_update()
-        stored = getattr(self, name)
-        if not spec.matches(expected, stored):
-            raise WriteVerificationError(name, expected, stored)
+
+        deadline = time.monotonic() + CONFIRM_DEADLINE
+        while True:
+            await self.async_update()
+            stored = getattr(self, name)
+            if spec.matches(expected, stored):
+                return
+            if time.monotonic() >= deadline:
+                raise WriteVerificationError(name, expected, stored)
+            await asyncio.sleep(CONFIRM_PAUSE)

@@ -74,8 +74,8 @@ def test_a_spec_carries_limits_and_units(device: Mtdx62Device) -> None:
     """A caller builds entities from these numbers, not from the register map."""
     spec = device.settings.writable_fields()[0]
 
-    assert (spec.minimum, spec.maximum, spec.step, spec.unit) == (0.6, 10.0, 0.01, "m")
-    assert (spec.raw_minimum, spec.raw_maximum) == (60, 1000)
+    assert (spec.minimum, spec.maximum, spec.step, spec.unit) == (1.0, 10.0, 0.01, "m")
+    assert (spec.raw_minimum, spec.raw_maximum) == (100, 1000)
 
 
 def test_a_spec_cannot_be_edited(device: Mtdx62Device) -> None:
@@ -136,6 +136,48 @@ def test_a_field_without_a_reading_never_matches(device: Mtdx62Device) -> None:
     spec = device.settings.writable_fields()[3]
 
     assert spec.matches(40, None) is False
+
+
+@pytest.mark.parametrize(
+    ("name", "value"),
+    [
+        ("detection_distance", 0.8),
+        ("shielding_distance", 0.1),
+        ("light_threshold", 500.0),
+    ],
+)
+async def test_the_measured_floors_are_refused(
+    device: Mtdx62Device, unit: MockModbusUnit, name: str, value: float
+) -> None:
+    """The sensor would clamp these silently, so the library refuses them instead."""
+    seen = writes(unit)
+
+    with pytest.raises(ValueError):
+        await device.settings.async_write(name, value)
+
+    assert seen == []
+
+
+async def test_a_slow_sensor_is_not_reported_as_a_mismatch(
+    device: Mtdx62Device,
+) -> None:
+    """The sensor shows the previous value for a moment; the check waits for the new one."""
+    await device.settings.async_update()
+    real_update = device.settings.async_update
+    calls = 0
+
+    async def delayed_update() -> None:
+        nonlocal calls
+        calls += 1
+        if calls > 1:
+            await real_update()
+
+    device.settings.async_update = delayed_update  # type: ignore[method-assign]
+
+    await device.settings.async_write("departure_delay", 40)
+
+    assert calls >= 2
+    assert device.settings.departure_delay == 40
 
 
 async def test_an_unknown_name_is_an_attribute_error(device: Mtdx62Device) -> None:
