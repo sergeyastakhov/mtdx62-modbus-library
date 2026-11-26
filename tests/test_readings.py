@@ -11,13 +11,13 @@ from mtdx62_modbus_library import DeviceStatus, Mtdx62Device
 
 async def test_reads_all_measurements(mock_modbus_unit: MockModbusUnit) -> None:
     """One read yields presence, illuminance, distance, health and both versions."""
-    mock_modbus_unit.input[0] = [1, 42, 250, 1, 0x0001, 0x0203, 0x0000, 0x0102]
+    mock_modbus_unit.input[0] = [1, 1506, 250, 1, 0x0001, 0x0203, 0x0000, 0x0102]
 
     device = Mtdx62Device(mock_modbus_unit)
     await device.async_update_readings()
 
     assert device.readings.presence is True
-    assert device.readings.illuminance == 42
+    assert device.readings.illuminance == 150.6
     assert device.readings.distance == 2.5
     assert device.readings.status_code == 1
     assert device.readings.status is DeviceStatus.OK

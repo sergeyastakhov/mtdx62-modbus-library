@@ -44,7 +44,7 @@ async def test_raw_dump_can_be_replayed(mock_modbus_unit: MockModbusUnit) -> Non
     await replay.async_update_readings()
 
     assert replay.readings.presence is True
-    assert replay.readings.illuminance == 42
+    assert replay.readings.illuminance == 4.2
     assert replay.readings.distance == 2.5
 
 

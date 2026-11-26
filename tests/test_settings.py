@@ -21,7 +21,7 @@ async def test_reads_settings(mock_modbus_unit: MockModbusUnit) -> None:
         9600,  # baudrate
         1,  # parity: odd
         2,  # active report: off
-        1000,  # light threshold, 10.00 lx
+        100,  # light threshold, 10.0 lx (tenths of a lux)
         600,  # report interval, 600 s
     ]
 

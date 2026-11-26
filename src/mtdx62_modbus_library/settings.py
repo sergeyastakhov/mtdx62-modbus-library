@@ -32,6 +32,7 @@ from .const import (
     HOLDING_TRIGGER_SENSITIVITY,
     HOLDING_UNIT_ID,
     HUNDREDTHS_SCALE,
+    TENTHS_SCALE,
 )
 from .errors import WriteVerificationError
 
@@ -158,8 +159,8 @@ _SPECS: dict[str, SettingSpec] = {
             "light_threshold",
             HOLDING_LIGHT_THRESHOLD,
             0.0,
-            1000 * HUNDREDTHS_SCALE,
-            HUNDREDTHS_SCALE,
+            1000 * TENTHS_SCALE,
+            TENTHS_SCALE,
             "lx",
             0,
             1000,
@@ -259,7 +260,7 @@ class Settings(Component):
 
     light_threshold = gauge(
         HOLDING_LIGHT_THRESHOLD,
-        HUNDREDTHS_SCALE,
+        TENTHS_SCALE,
         signed=False,
         unit="lx",
         writable=_validate("light_threshold"),

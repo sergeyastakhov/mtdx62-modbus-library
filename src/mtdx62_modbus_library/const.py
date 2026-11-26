@@ -32,8 +32,10 @@ HOLDING_REPORT_INTERVAL = 0x000C
 
 # The sensor reports distance in centimetres.
 DISTANCE_SCALE = 0.01
-# Delay and threshold registers carry hundredths of their unit.
+# Delay registers carry hundredths of their unit.
 HUNDREDTHS_SCALE = 0.01
+# Illuminance and the light threshold carry tenths of a lux: 1506 is 150.6 lx.
+TENTHS_SCALE = 0.1
 
 
 class DeviceStatus(IntEnum):

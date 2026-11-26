@@ -101,7 +101,7 @@ asyncio.run(main())
 | Attribute | Meaning | Unit |
 |---|---|---|
 | `readings.presence` | a person is detected, including someone sitting still | — |
-| `readings.illuminance` | ambient light as the sensor sees it | lx |
+| `readings.illuminance` | ambient light as the sensor sees it | lx, tenth of a lux |
 | `readings.distance` | distance to the detected target | m, centimetre resolution |
 | `readings.status_code` | raw health code | — |
 | `readings.status` | health code as `DeviceStatus`, `None` when unknown | — |
@@ -110,6 +110,13 @@ asyncio.run(main())
 | `settings.*` | detection range, delays, sensitivities, bus address and speed | see `Settings` |
 
 Every attribute is `None` until the first read of its sub-system.
+
+Illuminance comes with a tenth-of-a-lux resolution and a ceiling: the unit we tested stops at
+11280, which is 1128 lx, and stays there in brighter light. Treat that as the behaviour of one
+device — another unit may saturate elsewhere — and do not use the ceiling as a scale bound.
+
+The number is the sensor's own reading. Nobody compared it against a reference meter, so treat it
+as a relative signal — enough to tell dark from bright, not as a calibrated lux value.
 
 Reading the configuration is a separate call (`async_update_settings()`) precisely so that a
 5-second poll costs one request.
@@ -151,6 +158,8 @@ Three consequences worth a thought before writing:
   for, so a poll-based consumer should leave it off.
 - Writing `light_threshold` and `report_interval` rests on a register map that two vendor sources
   describe differently; the library writes exactly the documented address and never guesses.
+- The threshold is expressed in the same tenths of a lux as the reading: `10.0` is 10 lux, which
+  the device stores as 100.
 
 ## Health codes
 

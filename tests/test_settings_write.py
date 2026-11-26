@@ -271,7 +271,7 @@ async def test_the_light_threshold_round_trips(device: Mtdx62Device, unit: MockM
     """Ten lux go in as thousandths, as the register map says."""
     await device.settings.async_write("light_threshold", 10.0)
 
-    assert unit.holding[11] == 1000
+    assert unit.holding[11] == 100
     assert device.settings.light_threshold == 10.0
 
 

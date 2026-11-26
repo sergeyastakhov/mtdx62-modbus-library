@@ -7,7 +7,6 @@ from modbus_connection.model import (
     RegisterSpace,
     boolean,
     gauge,
-    integer,
     raw_register,
     uint32,
 )
@@ -20,6 +19,7 @@ from .const import (
     INPUT_RADAR_VERSION,
     INPUT_STATUS,
     INPUT_TARGET_DISTANCE,
+    TENTHS_SCALE,
     DeviceStatus,
 )
 
@@ -43,8 +43,8 @@ class Readings(Component):
     presence = boolean(INPUT_PRESENCE)
     """Whether a person is detected, including someone sitting still."""
 
-    illuminance = integer(INPUT_ILLUMINANCE, signed=False, unit="lx")
-    """Ambient illuminance as the sensor sees it, in lux."""
+    illuminance = gauge(INPUT_ILLUMINANCE, TENTHS_SCALE, signed=False, unit="lx")
+    """Ambient illuminance as the sensor sees it, in lux with a tenth of a lux."""
 
     distance = gauge(INPUT_TARGET_DISTANCE, DISTANCE_SCALE, signed=False, unit="m")
     """Distance to the detected target in metres, with a centimetre resolution."""
