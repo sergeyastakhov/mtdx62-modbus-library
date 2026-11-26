@@ -35,7 +35,7 @@ covered by this library, and the register map is identical between them.
 | MTD261-RC | 24 GHz | dry contact, ≤ 24 V, ≤ 100 mA | no |
 
 Both kinds are configured with the same infrared remote. The manuals for the Modbus and the
-dry-contact series are both in [`docs/sources/`](docs/sources/), so the difference is visible
+dry-contact series are both in [`docs/sources/`](https://github.com/sergeyastakhov/mtdx62-modbus-library/tree/main/docs/sources), so the difference is visible
 before buying the wrong one.
 
 Devices that look the same are also sold under other names, and Bluetooth variants exist. Check
@@ -45,10 +45,10 @@ the label before buying: this library speaks Modbus RTU only.
 
 | | | |
 |---|---|---|
-| ![Overview with the infrared remote](docs/images/device-overview.webp) | ![Angled view](docs/images/device-angled.webp) | ![Side view](docs/images/device-side.webp) |
+| ![Overview with the infrared remote](https://raw.githubusercontent.com/sergeyastakhov/mtdx62-modbus-library/main/docs/images/device-overview.webp) | ![Angled view](https://raw.githubusercontent.com/sergeyastakhov/mtdx62-modbus-library/main/docs/images/device-angled.webp) | ![Side view](https://raw.githubusercontent.com/sergeyastakhov/mtdx62-modbus-library/main/docs/images/device-side.webp) |
 | *Overview with the infrared remote* | *Angled view* | *Side view* |
 
-![Dimensions](docs/images/device-dimensions.webp)
+![Dimensions](https://raw.githubusercontent.com/sergeyastakhov/mtdx62-modbus-library/main/docs/images/device-dimensions.webp)
 
 *Dimensions, millimetres*
 
@@ -56,12 +56,12 @@ the label before buying: this library speaks Modbus RTU only.
 
 | | |
 |---|---|
-| ![Inside the three hardware versions, angled](docs/images/device-internals-angled.webp) | ![Inside the three hardware versions, front](docs/images/device-internals-front.webp) |
+| ![Inside the three hardware versions, angled](https://raw.githubusercontent.com/sergeyastakhov/mtdx62-modbus-library/main/docs/images/device-internals-angled.webp) | ![Inside the three hardware versions, front](https://raw.githubusercontent.com/sergeyastakhov/mtdx62-modbus-library/main/docs/images/device-internals-front.webp) |
 | *Inside all three hardware versions, angled* | *Inside all three hardware versions, front* |
 
 Pictures come from the vendor's product material. What the device actually does — register
 values, the self-check timeline, how it reacts to a cut bus — is in
-[`docs/DEVICE-FACTS.md`](docs/DEVICE-FACTS.md).
+[`docs/DEVICE-FACTS.md`](https://github.com/sergeyastakhov/mtdx62-modbus-library/blob/main/docs/DEVICE-FACTS.md).
 
 ## Install
 
@@ -201,7 +201,7 @@ An unknown or unwritable parameter raises `AttributeError`.
 
 Written against the vendor documentation for firmware **1.6**. The register map is in
 `openspec/specs/mtdx62-registers/`, and what the device actually does — register values, the
-self-check timeline, how it reacts to a cut bus — is in [`docs/DEVICE-FACTS.md`](docs/DEVICE-FACTS.md)
+self-check timeline, how it reacts to a cut bus — is in [`docs/DEVICE-FACTS.md`](https://github.com/sergeyastakhov/mtdx62-modbus-library/blob/main/docs/DEVICE-FACTS.md)
 together with the vendor material it was derived from.
 
 ## Tests

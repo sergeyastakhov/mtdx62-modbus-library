@@ -18,6 +18,8 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -e ".[test]"
+      - name: README links are absolute
+        run: python scripts/check_readme_links.py
       - name: Ruff format
         run: ruff format --check .
       - name: Ruff check
