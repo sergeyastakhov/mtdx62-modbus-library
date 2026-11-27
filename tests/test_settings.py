@@ -72,4 +72,4 @@ async def test_settings_cost_one_block_read(mock_modbus_unit: MockModbusUnit) ->
     assert len(events) == 1
     assert events[0].register_type == "holding"
     assert events[0].address == 0
-    assert events[0].count == 13
+    assert events[0].count == 14

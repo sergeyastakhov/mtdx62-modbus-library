@@ -14,7 +14,7 @@ import asyncio
 import math
 import time
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Final
 
 from modbus_connection.model import Component, WriteValidator, gauge, integer
 
@@ -27,6 +27,7 @@ from .const import (
     HOLDING_ENTRY_DELAY,
     HOLDING_ENTRY_INDENT,
     HOLDING_LIGHT_THRESHOLD,
+    HOLDING_MAC,
     HOLDING_MAINTAIN_SENSITIVITY,
     HOLDING_PARITY,
     HOLDING_REPORT_INTERVAL,
@@ -98,6 +99,10 @@ class SettingSpec:
             return False
         return abs(float(stored) - float(expected)) <= self.step / 2
 
+
+# Writing these moves the sensor to another link, so a confirmation read is
+# impossible: the old link is already silent.
+LINK_SETTINGS: Final = ("unit_id", "baudrate", "parity")
 
 _SPECS: dict[str, SettingSpec] = {
     spec.name: spec
@@ -192,9 +197,11 @@ def _validate(name: str) -> WriteValidator:
 class Settings(Component):
     """The sensor's parameters: read from the holding registers, written on request.
 
-    Every parameter the vendor register map describes is writable; ``0x000D`` is
-    not, because its meaning is unknown. Writing goes through
-    :meth:`async_write`, which confirms the value by reading it back.
+    Every parameter the vendor register map describes is writable, except
+    ``0x000D``: it is a single register the vendor calls a MAC code, so it is read
+    as ``mac_code`` and never written. Writing goes through :meth:`async_write`,
+    which confirms the value by reading it back — except for the three parameters
+    that decide how the sensor answers, where a confirmation is impossible.
     """
 
     detection_distance = gauge(
@@ -280,6 +287,9 @@ class Settings(Component):
     )
     """Interval of the sensor's active reporting."""
 
+    mac_code = integer(HOLDING_MAC, signed=False)
+    """One register the vendor calls a MAC code; it is not a full MAC address."""
+
     def writable_fields(self) -> tuple[SettingSpec, ...]:
         """Every parameter this sensor can be written, in register order."""
         return tuple(_SPECS.values())
@@ -312,6 +322,11 @@ class Settings(Component):
         expected = spec.coerce(value)
         await self.write(name, expected)
 
+        if name in LINK_SETTINGS:
+            # The sensor answers on the new settings from now on, so there is
+            # nothing to read back and the cached value would be a guess.
+            return
+
         deadline = time.monotonic() + CONFIRM_DEADLINE
         while True:
             await self.async_update()
@@ -321,3 +336,38 @@ class Settings(Component):
             if time.monotonic() >= deadline:
                 raise WriteVerificationError(name, expected, stored)
             await asyncio.sleep(CONFIRM_PAUSE)
+
+    async def async_write_link_settings(
+        self,
+        *,
+        unit_id: int | None = None,
+        baudrate: int | None = None,
+        parity: int | None = None,
+    ) -> None:
+        """Write the bus address, speed and parity as one request.
+
+        The three registers are consecutive, so one ``0x10`` covers them. Values
+        that are not passed are taken from the last read. Every value is checked
+        before anything reaches the bus.
+
+        There is no confirmation read: after this request the sensor answers on
+        the new settings, and the cache is left alone rather than filled with a
+        guess.
+        """
+        values = {
+            "unit_id": unit_id,
+            "baudrate": baudrate,
+            "parity": parity,
+        }
+        words: list[int] = []
+        for name in LINK_SETTINGS:
+            raw = values[name]
+            spec = _SPECS[name]
+            if raw is None:
+                current = getattr(self, name)
+                if current is None:
+                    raise ValueError(f"{name} is unknown; read the settings first")
+                words.append(int(current))
+                continue
+            words.append(int(spec.coerce(raw)))
+        await self.modbus_unit.write_registers(HOLDING_UNIT_ID, words)

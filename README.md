@@ -138,6 +138,10 @@ for spec in device.settings.writable_fields():
 `writable_fields()` is what a UI should build its controls from: name, limits, step, unit and the raw
 register bounds, so the range is not copied into a second place.
 
+`settings.mac_code` is the one register the vendor calls a MAC code. It is a single word, not a full
+MAC address — on the unit we tested it reads `1` — so it is exposed for diagnostics and cannot be
+written.
+
 After the write the library reads the parameter block and compares. A device that stores something
 else raises `WriteVerificationError` carrying both values instead of pretending the write worked; a
 successful call leaves `settings` filled from that same read, so no extra poll is needed.
@@ -166,7 +170,9 @@ real unit:
   comes from the device.
 - **`unit_id`, `baudrate` and `parity` apply at once**, not after a power cycle: the moment the write
   lands, the device answers on the new address or speed. A caller that changes them has to move its
-  link with them, or it loses the sensor until it does.
+  link with them, or it loses the sensor until it does. These three are written **without a
+  confirmation read** — there is nothing to read back — and `async_write_link_settings()` sends all
+  three as one request, filling the values you do not pass from the last read.
 - **`active_report` switches the device into push mode.** On a shared bus that means frames nobody
   asked for, so a poll-based consumer should leave it off.
 - The threshold is expressed in the same tenths of a lux as the reading: `10.0` is 10 lux, which the

@@ -180,6 +180,20 @@ async def test_a_slow_sensor_is_not_reported_as_a_mismatch(
     assert device.settings.departure_delay == 40
 
 
+async def test_the_mac_code_is_read_but_not_written(
+    device: Mtdx62Device, unit: MockModbusUnit
+) -> None:
+    """One register the vendor calls a MAC code: read it, never write it."""
+    unit.holding[13] = 1
+    await device.settings.async_update()
+    assert device.settings.mac_code == 1
+
+    with pytest.raises(AttributeError):
+        await device.settings.async_write("mac_code", 2)
+
+    assert unit.holding[13] == 1
+
+
 async def test_an_unknown_name_is_an_attribute_error(device: Mtdx62Device) -> None:
     """Asking to write something that does not exist is a programmer's mistake."""
     with pytest.raises(AttributeError, match="not a writable setting"):
@@ -268,24 +282,73 @@ async def test_a_silent_device_raises_the_transport_error(
         await device.settings.async_write("departure_delay", 40)
 
 
-async def test_the_bus_address_can_be_written_without_touching_the_unit(
+async def test_the_bus_address_is_written_without_a_confirmation_read(
     device: Mtdx62Device, unit: MockModbusUnit
 ) -> None:
-    """The register changes; the link the caller owns does not."""
+    """The sensor answers elsewhere at once, so reading back would only time out."""
+    await device.settings.async_update()
+    before = device.settings.unit_id
+    reads = len(unit.read_events)
+
     await device.settings.async_write("unit_id", 5)
 
     assert unit.holding[7] == 5
-    assert device.settings.unit_id == 5
+    assert len(unit.read_events) == reads
+    assert device.settings.unit_id == before
 
 
-async def test_the_baud_rate_can_be_written_without_touching_the_unit(
+async def test_the_baud_rate_is_written_without_a_confirmation_read(
     device: Mtdx62Device, unit: MockModbusUnit
 ) -> None:
     """Configured speed is data; the live connection is the caller's business."""
+    reads = len(unit.read_events)
+
     await device.settings.async_write("baudrate", 19200)
 
     assert unit.holding[8] == 19200
-    assert device.settings.baudrate == 19200
+    assert len(unit.read_events) == reads
+
+
+async def test_the_three_link_settings_go_out_as_one_request(
+    device: Mtdx62Device, unit: MockModbusUnit
+) -> None:
+    """One function 0x10 covers the three consecutive registers."""
+    await device.settings.async_update()
+    seen = writes(unit)
+
+    await device.settings.async_write_link_settings(unit_id=5, baudrate=19200, parity=2)
+
+    assert len(seen) == 1
+    assert seen[0].function_code == 0x10
+    assert seen[0].values == [5, 19200, 2]
+    assert unit.holding[7] == 5
+    assert unit.holding[8] == 19200
+    assert unit.holding[9] == 2
+
+
+async def test_a_missing_link_value_comes_from_the_cache(
+    device: Mtdx62Device, unit: MockModbusUnit
+) -> None:
+    """Changing only the address keeps the speed and parity the sensor reports."""
+    await device.settings.async_update()
+    seen = writes(unit)
+    settings = device.settings
+
+    await settings.async_write_link_settings(unit_id=5)
+
+    assert seen[0].values == [5, settings.baudrate, settings.parity]
+
+
+async def test_an_invalid_link_value_never_reaches_the_bus(
+    device: Mtdx62Device, unit: MockModbusUnit
+) -> None:
+    """The batch is validated before the request, not by the sensor."""
+    seen = writes(unit)
+
+    with pytest.raises(ValueError):
+        await device.settings.async_write_link_settings(baudrate=10)
+
+    assert seen == []
 
 
 async def test_the_parity_must_be_one_of_the_three_codes(
