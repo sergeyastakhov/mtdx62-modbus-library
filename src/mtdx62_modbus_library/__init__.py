@@ -13,7 +13,7 @@ from .readings import Readings as Readings
 from .settings import Settings as Settings
 from .settings import SettingSpec as SettingSpec
 
-__version__ = "0.5.0"
+__version__ = "0.5.1"
 
 __all__ = [
     "ALL",

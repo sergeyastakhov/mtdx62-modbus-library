@@ -11,11 +11,18 @@ Built on [`modbus-connection`](https://home-assistant-libs.github.io/modbus-conn
 caller owns the connection and hands over a `ModbusUnit`. The library never opens a socket or a
 serial port and has no dependency on Home Assistant.
 
-The dependency is pinned to `modbus-connection>=4.12.8`. Earlier releases close a connection and
-reopen it when a unit asks for a longer timeout, which races with the next request
-([issue 269](https://github.com/home-assistant-libs/modbus-connection/issues/269)); 4.12.8 keeps
-the link open instead. On a serial bus that race shows up as a port that refuses to open until
-the stale connection goes away.
+The floor is `modbus-connection>=4.12.3`, the version Home Assistant 2026.10.0 ships: install the
+library there and nothing in Home Assistant's own stack is replaced. Newer releases are worth
+having. 4.12.8 keeps the link open when a unit asks for a longer timeout, where earlier versions
+close and reopen it and race with the next request
+([issue 269](https://github.com/home-assistant-libs/modbus-connection/issues/269)) — on a serial
+bus that shows up as a port that refuses to open until the stale connection goes away. Home
+Assistant 2026.11.3 and newer already ship it.
+
+We once required 4.12.8 outright, believing that race was the port conflict we were chasing. It
+was not: the port was held by a `modbus:` entry in `configuration.yaml`, which opens the port with
+its own client and shares it with nobody. The floor went back down, and both ends are now tested —
+see the CI matrix.
 
 ## The device
 
